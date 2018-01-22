@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="更换图标"
+            visible="true"
+            id="newpmbe.icons.actionSet">
+         <menu
+               label="更换图标"
+               id="iconsMenu">
+            <separator
+                  name="iconsGroup">
+            </separator>
+         </menu>
+         <action
+               label="图标样式三"
+
+               class="newpmbe.icons.actions.Icons3ChangeAction"
+
+               menubarPath="iconsMenu/iconsGroup"
+
+               id="newpmbe.icons.actions.SampleAction">
+            
+         </action>         
+         <action
+               label="图标样式二"
+
+               class="newpmbe.icons.actions.Icons2ChangeAction"
+
+               menubarPath="iconsMenu/iconsGroup"
+
+               id="newpmbe.icons.actions.SampleAction">
+            
+         </action>
+         <action
+               label="图标样式一"
+
+               class="newpmbe.icons.actions.Icons1ChangeAction"
+
+               menubarPath="iconsMenu/iconsGroup"
+
+               id="newpmbe.icons.actions.SampleAction">
+            
+         </action>
+      </actionSet>
+   </extension>
+
+</plugin>

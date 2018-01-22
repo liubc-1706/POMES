@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2005  IBM Corporation and others.                -->
+<!-- All rights reserved. This program and the accompanying materials      -->
+<!-- are made available under the terms of the Eclipse Public License v1.0 -->
+<!-- which accompanies this distribution, and is available at              -->
+<!-- http://www.eclipse.org/legal/epl-v10.html                             -->
+<!--                                                                       -->
+<!-- Contributors: 	丁宗湖                                                        -->
+<!--    IBM Corporation - initial API and implementation                   -->
+<?eclipse version="3.2"?>
+<plugin>
+
+	<extension id="NewInvokatronAction"
+   	   	name="Open Project Action"
+   	   	point="org.eclipse.ui.actionSets">
+   	 	<actionSet id="project.actionSet"
+   	 		label="%actionSet.label.0"
+   	 		visible="true">
+   	 	<action
+            class="process.diagram.actions.OpenModuleAction"
+            icon="icons/SADComponent.gif"
+            id="process.diagram.actions.OpenProjectAction1"
+            label="%action.label.0"
+            menubarPath="file/open.ext"
+            tooltip="%action.tooltip.0">
+   	 	</action>
+   	 	<action id="process.diagram.actions.NewResourceModelAction1"
+   	 		label="%action.label.2"
+   	 		menubarPath="file/new.ext"
+   	 		tooltip="%action.tooltip.2"
+   	 		class="process.diagram.actions.NewResourceModelAction">
+   	 	</action>
+   	 	<action id="process.diagram.actions.NewOrganizationModelAction1"
+   	 		label="%action.label.3"
+   	 		menubarPath="file/new.ext"
+   	 		tooltip="%action.tooltip.3"
+   	 		class="process.diagram.actions.NewOrganizationModelAction">
+   	 	</action>
+   	 	<action id="process.diagram.actions.NewProcessModelAction1"
+   	 		label="%action.label.4"
+   	 		menubarPath="file/new.ext"
+   	 		tooltip="%action.tooltip.4"
+   	 		class="process.diagram.actions.NewProcessModelAction">
+   	 	</action>
+      <menu
+            id="newPmbe.custom.new"
+            label="新建"
+            path="file">
+         <groupMarker
+               name="newProjectGroup">
+         </groupMarker>
+      </menu>
+      <action
+            class="newpmbe.rcp.actions.transport.ImportProjectAction"
+            icon="icons/transport/import_wiz(1).gif"
+            id="newPmbe.custom.import"
+            label="导入..."
+            menubarPath="file/open.ext"
+            tooltip="导入工程">
+      </action>
+      <action
+            class="newpmbe.rcp.actions.transport.ExportProjectAction"
+            icon="icons/transport/export_wiz(1).gif"
+            id="newPmbe.custom.export"
+            label="导出..."
+            menubarPath="file/open.ext"
+            style="push">
+      </action>
+      <action
+            class="newpmbe.rcp.actions.transport.SaveProjectAsAction"
+            icon="icons/saveas_edit(1).gif"
+            id="newPmbe.custom.saveAsAction"
+            label="工程另存为..."
+            menubarPath="file/open.ext"
+            style="push">
+      </action>
+   	 </actionSet>
+      <actionSet
+            id="userConfig.actionSet"
+            label="%actionSet.label.1"
+            visible="true">
+            <!--
+         <action
+               class="process.diagram.userRightControl.UserConfigAction"
+               icon="icons/diagram.gif"
+               id="userConfig.action"
+               label="用户权限"
+               menubarPath="newpmbe.svn.menu/rightNavigateGroup"
+               style="push"
+               />
+               -->
+   	 </actionSet>
+  	</extension>
+  	
+  	
+  	
+  	<extension point="org.eclipse.ui.popupMenus">        
+      <objectContribution
+            adaptable="false"
+            id="newPmbe.process.diagram.ui.objectContribution.EMPCompActivityEditPart1"
+            objectClass="newpmbe.process.diagram.edit.parts.EMPCompActivityEditPart">
+         <action
+               class="process.diagram.actions.OpenSubdiagramAction"
+               enablesFor="1"
+               id="process.diagram.actions.OpenSubdiagramAction1"
+               label="%action.label.6"
+               menubarPath="additions">
+         </action>
+      </objectContribution>   
+      <objectContribution
+            id="newPmbe.organization.diagram.objectContribution.IFolder"
+            objectClass="org.eclipse.core.resources.IFolder">
+         <action
+               class="process.diagram.actions.NewpmbeCheckInAction"
+               enablesFor="1"
+               id="newPmbe.organization.diagram.part.checkInAction"
+               label="%action.label.7"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+      <objectContribution
+            id="newPmbe.organization.diagram.objectContribution.IFolder"
+            objectClass="org.eclipse.core.resources.IFolder">
+         <action
+               class="process.diagram.actions.NewpmbeCheckOutAction"
+               enablesFor="1"
+               id="newPmbe.organization.diagram.part.checkOutAction"
+               label="%action.label.8"
+               menubarPath="additions">
+         </action>
+      </objectContribution>                 
+      <objectContribution
+            id="newPmbe.organization.diagram.objectContribution.IProject"
+            objectClass="org.eclipse.core.resources.IProject">
+         <action
+               class="process.diagram.actions.NewpmbeCheckInAction"
+               enablesFor="1"
+               id="newPmbe.organization.diagram.part.checkInAction"
+               label="%action.label.9"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+      <objectContribution
+            id="newPmbe.organization.diagram.objectContribution.IProject"
+            objectClass="org.eclipse.core.resources.IProject">
+         <action
+               class="process.diagram.actions.NewpmbeCheckOutAction"
+               enablesFor="1"
+               id="newPmbe.organization.diagram.part.checkOutAction"
+               label="%action.label.10"
+               menubarPath="additions">
+         </action>
+      </objectContribution>                 
+        <objectContribution
+            id="newPmbe.organization.diagram.objectContribution.IProject"
+            objectClass="org.eclipse.core.resources.IProject">
+         <action
+               class="process.diagram.actions.NewpmbeAddModelAction"
+               enablesFor="1"
+               id="newPmbe.organization.diagram.part.addModelAction"
+               label="%action.label.11"
+               menubarPath="additions">
+         </action>
+      </objectContribution>                 
+        <objectContribution
+            id="newPmbe.organization.diagram.objectContribution.IProject"
+            objectClass="org.eclipse.core.resources.IProject">
+         <action
+               class="process.diagram.actions.NewpmbeUpdateDirAction"
+               enablesFor="1"
+               id="newPmbe.organization.diagram.part.updateDirAction"
+               label="%action.label.12"
+               menubarPath="additions">
+         </action>
+      </objectContribution>   
+      
+       <objectContribution
+            id="gbms.custom.process.simulation.diagram.compAct.openSubDiagram"
+            objectClass="newpmbe.simulation.diagram.edit.parts.EMPCompActivityEditPart">
+         <action
+               class="simulation.popup.action.OpenSimCompActSubDiagramAction"
+               id="gbms.custom.simulation.diagram.OpenSubDiagramAction2"
+               label="打开活动子图"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+      
+      <objectContribution
+            id="gbms.custom.process.simulation.diagram.compProductAtProcess.openProcessProductSubDiagram"
+            objectClass="newpmbe.simulation.diagram.edit.parts.EMPProductPackageEditPart">
+         <action
+               class="simulation.popup.action.OpenProcessSimProductGroupSubDiagramAction"
+               id="gbms.custom.simulation.diagram.OpenSubDiagramAction3"
+               label="打开产品子图"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+      
+      <objectContribution
+            id="gbms.custom.process.simulation.diagram.compProductAtProduct.openProductProductSubDiagram"
+            objectClass="newpmbe.simulation.product.diagram.edit.parts.EMPProductPackageEditPart">
+         <action
+               class="simulation.popup.action.OpenProductSimProductGroupSubDiagramAction"
+               id="gbms.custom.simulation.diagram.OpenSubDiagramAction4"
+               label="打开产品子图"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+      
+      <objectContribution
+            id="gbms.custom.process.simulation.diagram.basicAct.setBreakPoint"
+            objectClass="newpmbe.simulation.diagram.edit.parts.EMPNormalActivityEditPart">
+         <action
+               class="simulation.popup.action.SetLeafActBreakPointAction"
+               id="gbms.custom.simulation.diagram.SetLeafActBreakPoint"
+               label="设置断点"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+      <objectContribution
+            id="gbms.custom.process.simulation.diagram.AutoAct.setBreakPoint"
+            objectClass="newpmbe.simulation.diagram.edit.parts.EMPAutoActivityEditPart">
+         <action
+               class="simulation.popup.action.SetLeafActBreakPointAction"
+               id="gbms.custom.simulation.diagram.SetLeafActBreakPoint"
+               label="设置断点"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+       <objectContribution
+            id="gbms.custom.process.simulation.diagram.BatAct.setBreakPoint"
+            objectClass="newpmbe.simulation.diagram.edit.parts.EMPManualBatchActivityEditPart">
+         <action
+               class="simulation.popup.action.SetLeafActBreakPointAction"
+               id="gbms.custom.simulation.diagram.SetLeafActBreakPoint"
+               label="设置断点"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+       <objectContribution
+            id="gbms.custom.process.simulation.diagram.AutoBatAct.setBreakPoint"
+            objectClass="newpmbe.simulation.diagram.edit.parts.EMPAutoBatchActivityEditPart">
+         <action
+               class="simulation.popup.action.SetLeafActBreakPointAction"
+               id="gbms.custom.simulation.diagram.SetLeafActBreakPoint"
+               label="设置断点"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+                                   
+      
+
+      <objectContribution
+            id="newPmbe.organization.diagram.ui.objectContribution.IFile4"
+            nameFilter="*.organization_diagram"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="编辑编码标准"
+               class="Coding.EditCS"
+               menubarPath="additions"
+               enablesFor="1"
+               id="Coding.EditCSID">
+         </action>
+      </objectContribution>
+      <objectContribution
+            id="newPmbe.organization.diagram.ui.objectContribution.IFile3"
+            nameFilter="*.organization_diagram"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="新建编码标准"
+               class="Coding.CreateCS"
+               menubarPath="additions"
+               enablesFor="1"
+               id="Coding.CreateCSID">
+         </action>
+      </objectContribution>  
+     <objectContribution
+            id="newPmbe.organization.diagram.ui.objectContribution.IFile2"
+            nameFilter="*.organization_diagram"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="选择编码标准"
+               class="Coding.SelectCS"
+               menubarPath="additions"
+               enablesFor="1"
+               id="Coding.SWTTestID">
+         </action>
+      </objectContribution>  
+
+        
+      <objectContribution
+            id="newPmbe.organization.diagram.ui.objectContribution.IFile3"
+            nameFilter="*.organization_diagram"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="编码报告"
+               class="Coding.GenerateOrgReport"
+               menubarPath="additions"
+               enablesFor="1"
+               id="Coding.GenerateOrgReportID">
+         </action>
+      </objectContribution>   
+      <objectContribution
+            id="newPmbe.organization.diagram.ui.objectContribution.IFile1"
+            nameFilter="*.organization_diagram"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="自动编码"
+               class="Coding.AssignOrg"
+               menubarPath="additions"
+               enablesFor="1"
+               id="Coding.CodingOrgID">
+         </action>
+      </objectContribution>     
+
+   
+          
+     
+      
+
+      
+      <objectContribution
+            id="newPmbe.organization.diagram.ui.objectContribution.IFile42"
+            nameFilter="*.resource_diagram"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="编辑编码标准"
+               class="Coding.EditCS"
+               menubarPath="additions"
+               enablesFor="1"
+               id="Coding.EditCSID2">
+         </action>
+      </objectContribution> 
+            <objectContribution
+            id="newPmbe.organization.diagram.ui.objectContribution.IFile32"
+            nameFilter="*.resource_diagram"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="新建编码标准"
+               class="Coding.CreateCS"
+               menubarPath="additions"
+               enablesFor="1"
+               id="Coding.CreateCSID2">
+         </action>
+      </objectContribution>  
+        <objectContribution
+            id="newPmbe.organization.diagram.ui.objectContribution.IFile22"
+            nameFilter="*.resource_diagram"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="选择编码标准"
+               class="Coding.SelectCS"
+               menubarPath="additions"
+               enablesFor="1"
+               id="Coding.SWTTestID2">
+         </action>
+      </objectContribution>  
+       <objectContribution
+            id="newPmbe.organization.diagram.ui.objectContribution.IFile5"
+            nameFilter="*.resource_diagram"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="编码报告"
+               class="Coding.GenerateResReport"
+               menubarPath="additions"
+               enablesFor="1"
+               id="Coding.GenerateResReportID">
+         </action>
+      </objectContribution>   
+           <objectContribution
+            id="newPmbe.organization.diagram.ui.objectContribution.IFile4"
+            nameFilter="*.resource_diagram"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="自动编码"
+               class="Coding.AssignRes"
+               menubarPath="additions"
+               enablesFor="1"
+               id="Coding.CodingResID">
+         </action>
+      </objectContribution>                    
+  </extension>
+    <extension point="org.eclipse.ui.bindings">
+		<key commandId="com.my.Process.openNewDiagram" sequence="M1+O" schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+		<key commandId="com.my.Process.InsertData" sequence="M1+I" schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+		<key commandId="com.my.Process.ChangeRuntimeNodeFigure" sequence="M1+F" schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+	    <key commandId="com.my.Process.ChangeRuntimePaletteFigure" sequence="M1+P" schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+	</extension>
+	
+	<extension point="org.eclipse.ui.commands">
+		<category name="%category.name.1" description="%category.description.1" id="org.eclipse.gmf.category.process"/>
+		<command categoryId="org.eclipse.gmf.category.process" description="%command.description.4" 
+
+id="com.my.Process.openNewDiagram" name="%command.name.4">
+		</command>
+		<command categoryId="org.eclipse.gmf.category.process" description="%command.description.5" id="com.my.Process.InsertData" 
+
+name="%command.name.5">
+		</command>
+		<command categoryId="org.eclipse.gmf.category.process" description="%command.description.6" 
+
+id="com.my.Process.ChangeNodeFigure" name="%command.name.6">
+		</command>
+		<command categoryId="org.eclipse.gmf.category.process" description="%command.description.7" 
+
+id="com.my.Process.ChangePaletteFigure" name="%command.name.7">
+		</command>
+	</extension>	    
+    <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="newpmbe.rcp.Application">
+         </run>
+      </application>
+   </extension>
+   
+    <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="%perspective.name.0"
+            class="newpmbe.rcp.Perspective"
+            id="newpmbe.rcp.perspective">
+      </perspective>
+   </extension>
+	<extension
+	      point="org.eclipse.ui.views">
+       <view
+             class="org.eclipse.ui.views.contentoutline.ContentOutline"
+             icon="icons/outline_co.gif"
+             id="org.eclipse.ui.views.ContentOutline"
+             name="大纲"/>
+       <view
+             class="newpmbe.process.validator.ProblemsView"
+             icon="icons/properties(3).gif"
+             id="newpmbe.validator.views.ProblemsView"
+             name="模型完整性检查"/>
+       <view
+             class="newpmbe.rcp.views.Navigator.NavigatorView"
+             icon="icons/filenav_nav.gif"
+             id="newpmbe.rcp.ui.NavigatorView"
+             name="导航器">
+       </view>
+       <view
+             class="org.eclipse.ui.navigator.CommonNavigator"
+             icon="icons/SADComponent.gif"
+             id="org.eclipse.ui.navigator.ProjectExplorer"
+             name="模型浏览器">
+       </view>
+	</extension>
+	
+	 <extension point="org.eclipse.ui.ide.resourceFilters">
+      <filter
+            selected="true"
+            pattern=".project">
+      </filter>
+      <filter
+            selected="true"
+            pattern=".settings">
+      </filter>
+   </extension>
+   
+    <extension point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="newpmbe.rcp.perspective">
+         <view
+               relative="org.eclipse.ui.views.contentoutline.ContentOutline"
+               visible="false"
+               relationship="stack"
+               id="process.diagram.view.NavigatorViewID">
+         </view>
+         <actionSet
+               id="project.actionSet">
+         </actionSet>
+         <actionSet
+               id="userConfig.actionSet">
+         </actionSet>
+         <actionSet
+               id="newpmbe.modelTransfer.actionSet">
+         </actionSet>
+         <actionSet
+               id="newpmbe.actionSet.advanced">
+         </actionSet>
+      </perspectiveExtension>
+      <perspectiveExtension
+            targetID="newpmbe.rcp.perspective">
+         <viewShortcut
+               id="process.diagram.view.NavigatorViewID">
+         </viewShortcut>    
+          <viewShortcut
+               id="process.diagram.view.ProcessModelViewPart">
+         </viewShortcut>
+      </perspectiveExtension>
+   </extension>
+    <extension
+          id="product"
+          point="org.eclipse.core.runtime.products">
+       <product
+             application="newPmbe.custom.application"
+             name="POMES-Editor">
+          <property
+                name="aboutImage"
+                value="icons/4fun.gif">
+          </property>
+          <property
+                name="startupProgressRect"
+                value="300,400,200,20">
+          </property>
+          <property
+                name="startupForegroundColor"
+                value="400080">
+          </property>
+          <property
+                name="startupMessageRect"
+                value="200,400,200,20">
+          </property>
+          <property
+                name="appName"
+                value="newPmbe">
+          </property>
+          <property
+                name="aboutText"
+                value="newPmbe is a product for enterprise.&#x0A; It provides a set of sollutions for process, organization and &#x0A;resource, and supports for modelling, simulation and emulation.&#x0A;It also automatic generates the documents during the modeling, &#x0A;which can bring more efficiency for planning and executing&#x0A;tasks.">
+          </property>
+          <property
+                name="windowImages"
+                value="icons/alt_window_16.gif,icons/alt_window_32.gif">
+          </property>
+       </product>
+    </extension>
+- <extension point="org.eclipse.ui.intro">
+  <intro class="org.eclipse.ui.intro.config.CustomizableIntroPart" icon="icons/alt_window_16.gif" id="newPmbe.custom.intro" /> 
+  <introProductBinding introId="newPmbe.custom.intro" productId="newPmbe.custom.product" /> 
+  </extension>
+- <extension point="org.eclipse.ui.intro.config">
+- <config content="introContent.xml" id="newPmbe.custom.configId" introId="newPmbe.custom.intro">
+- <presentation home-page-id="root">
+  <implementation kind="html" os="win32,linux,macosx" /> 
+  </presentation>
+  </config>
+  </extension>
+  <extension
+        point="org.eclipse.ui.intro.configExtension">
+     <configExtension
+           configId="newPmbe.custom.configId"
+           content="ext.xml">
+     </configExtension>
+  </extension>
+  <extension
+        point="org.eclipse.ui.activities">
+     <activity
+           id="newPmbe.custom.activity3"
+           name="newPmbe.custom.activity3">
+     </activity>
+     <activityPatternBinding
+           activityId="newPmbe.custom.activity3"
+           pattern="org\.eclipse\.ui\.editors/org\.eclipse.*">
+     </activityPatternBinding>
+     <activityPatternBinding
+           activityId="newPmbe.custom.activity3"
+           pattern="org\.eclipse\.search.*">
+     </activityPatternBinding>
+          <activityPatternBinding
+           activityId="newPmbe.custom.activity3"
+           pattern="org\.eclipse\.ui\.externaltools.*">
+     </activityPatternBinding>
+     <activity
+           id="newPmbe.custom.activity1"
+           name="newPmbe.custom.activity1">
+     </activity>
+     <activityPatternBinding
+           activityId="newPmbe.custom.activity1"
+           pattern="org\.eclipse\.ui\.ide.*">
+     </activityPatternBinding>
+     <activity
+           id="newPmbe.custom.activity2"
+           name="newPmbe.custom.activity2">
+     </activity>
+     <activityPatternBinding
+           activityId="newPmbe.custom.activity2"
+           pattern="org\.eclipse\.compare.*">
+     </activityPatternBinding>
+     <activity
+           id="newPmbe.custom.activity6"
+           name="newPmbe.custom.activity6">
+     </activity>
+     <activityPatternBinding
+           activityId="newPmbe.custom.activity1"
+           pattern="org\.eclipse\.team\.ui.*">
+     </activityPatternBinding>
+     <activityPatternBinding
+           activityId="newPmbe.custom.activity1"
+           pattern="org\.eclipse\.gmf\.runtime\.diagram\.ui\.providers/printingContributionItemProvider">
+     </activityPatternBinding>
+     <activityPatternBinding
+           activityId="newPmbe.custom.activity1"
+           pattern="org\.eclipse\.jdt\.ui.*">
+     </activityPatternBinding>
+     <activityPatternBinding
+           activityId="newPmbe.custom.activity1"
+           pattern="org\.eclipse\.ui\.navigator\.resources.*">
+     </activityPatternBinding>
+     <activityPatternBinding
+           activityId="newPmbe.custom.activity1"
+           pattern="org\.eclipse\.pde\.ui.*">
+     </activityPatternBinding>
+     <activityPatternBinding
+           activityId="newPmbe.custom.activity1"
+           pattern="org\.eclipse\.debug.*">
+     </activityPatternBinding>
+  </extension>
+  <extension
+        id="product1"
+        point="org.eclipse.core.runtime.products">
+     <product
+           application="newPmbe.custom.application"
+           name="epms">
+        <property
+              name="aboutText"
+              value="epms3.0">
+        </property>
+        <property
+              name="aboutImage"
+              value="icons/4fun.gif">
+        </property>
+        <property
+              name="startupForegroundColor"
+              value="000000">
+        </property>
+        <property
+              name="startupProgressRect"
+              value="300,400,200,20">
+        </property>
+        <property
+              name="startupMessageRect"
+              value="2000,400,200,20">
+        </property>
+     </product>
+  </extension>
+</plugin>

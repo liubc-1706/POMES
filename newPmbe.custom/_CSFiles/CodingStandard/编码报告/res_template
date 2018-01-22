@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 U (http://www.xmlspy.com) by et8 (et8) --><?xml-stylesheet type="text/xsl" href="ResResult.xsl"?>
+<CodingReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<AbsLocationList>
+		</AbsLocationList>
+		<AbsToolList>
+		</AbsToolList>
+		<AbsMachineList>
+		</AbsMachineList>
+		<LocationList>
+		</LocationList>
+		<ToolList>
+		</ToolList>
+		<MachineList>
+		</MachineList>
+</CodingReport>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- 由 Microsoft Visio 11.0, SVG Export, v1.0 生成 EMPBatchActivity.svg 页-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="8.27438in"
+		height="11.4677in" viewBox="0 0 595.756 825.677" xml:space="preserve" color-interpolation-filters="sRGB" class="st3">
+	<v:documentProperties v:langID="2052" v:metric="true" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#688037;stroke:#688037;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st2 {fill:#808080;stroke:#808080;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st3 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<g id="group5-1" transform="translate(0.24,-0.24)" v:mID="5" v:groupContext="group">
+			<title>工作表.5</title>
+			<g id="shape2-2" v:mID="2" v:groupContext="shape" transform="translate(330.709,-691.381)">
+				<title>直角三角形</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<path d="M0 825.68 L264.57 825.68 L0 736.47 L0 825.68 Z" class="st1"/>
+			</g>
+			<g id="shape1-4" v:mID="1" v:groupContext="shape" transform="translate(66.1417,-691.381)">
+				<title>椭圆</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<path d="M0 781.07 A198.425 44.6052 0 0 1 396.85 781.07 A198.425 44.6052 0 1 1 -0 781.07 Z" class="st1"/>
+			</g>
+			<g id="shape3-6" v:mID="3" v:groupContext="shape" transform="translate(2.39808E-014,-646.776)">
+				<title>矩形</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<rect x="0" y="647.256" width="66.1417" height="178.421" class="st1"/>
+			</g>
+			<g id="shape4-8" v:mID="4" v:groupContext="shape" transform="translate(231.496,-2.27374E-013)">
+				<title>矩形.4</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<rect x="0" y="156.598" width="66.1417" height="669.079" class="st2"/>
+			</g>
+		</g>
+	</g>
+</svg>

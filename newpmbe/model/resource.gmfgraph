@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgraph:Canvas xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmfgraph="http://www.eclipse.org/gmf/2005/GraphicalDefinition" name="vpml">
+  <figures
+      name="Default">
+    <figures
+        xsi:type="gmfgraph:PolylineConnection"
+        referencingElements="EMRClassificationRelationship"
+        name="SolidLine">
+      <foregroundColor
+          xsi:type="gmfgraph:ConstantColor"
+          value="black"/>
+      <backgroundColor
+          xsi:type="gmfgraph:ConstantColor"
+          value="black"/>
+    </figures>
+    <figures
+        xsi:type="gmfgraph:Rectangle"
+        referencingElements="EMRAbstractToolType EMRAbstractMachineType EMRAbstractLocationType EMRToolType EMRMachineType EMRLocationType"
+        name="BasicRectangle"
+        fill="false"/>
+    <figures
+        xsi:type="gmfgraph:Label"
+        referencingElements="EMObjectName"
+        name="NodeName"
+        text="&lt;..>"/>
+  </figures>
+  <nodes
+      name="EMRAbstractToolType"
+      figure="BasicRectangle"/>
+  <nodes
+      name="EMRAbstractMachineType"
+      figure="BasicRectangle"/>
+  <nodes
+      name="EMRAbstractLocationType"
+      figure="BasicRectangle"/>
+  <nodes
+      name="EMRToolType"
+      figure="BasicRectangle"/>
+  <nodes
+      name="EMRMachineType"
+      figure="BasicRectangle"/>
+  <nodes
+      name="EMRLocationType"
+      figure="BasicRectangle"/>
+  <connections
+      name="EMRClassificationRelationship"
+      figure="SolidLine"/>
+  <labels
+      name="EMObjectName"
+      figure="NodeName"/>
+</gmfgraph:Canvas>

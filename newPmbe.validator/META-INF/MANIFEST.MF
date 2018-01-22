@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Validator Plug-in
+Bundle-SymbolicName: newPmbe.validator; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: newpmbe.validator.Activator
+Require-Bundle: org.eclipse.ui.ide,
+ org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide,
+ org.eclipse.gmf.runtime.diagram.ui,
+ newpmbe.process.diagram
+Eclipse-LazyStart: true
+Bundle-ClassPath: .,
+ lib/jdom.jar
+Export-Package: newpmbe.process.validator,
+ newpmbe.validator

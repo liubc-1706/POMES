@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/newpmbe/src"
+    editorDirectory="/newpmbe.information.editor/src" modelPluginID="newpmbe" modelName="NewPMBE"
+    importerID="org.eclipse.emf.importer.ecore">
+  <foreignModel>NewPMBE.ecore</foreignModel>
+  <genPackages prefix="Vpml" disposableProviderFactory="true" ecorePackage="NewPMBE.ecore#/">
+    <genClasses ecoreClass="NewPMBE.ecore#//EMObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//EMObject/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//EMObject/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//EMObject/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//EMObject/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//EMObject/OID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//EMObject/sourceObjSourceRelation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//EMObject/targetObjTargetRelation"/>
+    </genClasses>
+    <genClasses ecoreClass="NewPMBE.ecore#//EMModel"/>
+    <genClasses ecoreClass="NewPMBE.ecore#//EMDiagram">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//EMDiagram/creater"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//EMDiagram/createdDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//EMDiagram/lastModifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//EMDiagram/lastModifiedDate"/>
+    </genClasses>
+    <nestedGenPackages prefix="Organizationpackage" basePackage="vpml" disposableProviderFactory="true"
+        ecorePackage="NewPMBE.ecore#//organizationpackage">
+      <genClasses ecoreClass="NewPMBE.ecore#//organizationpackage/EMOResourceGroupType">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//organizationpackage/EMOResourceGroupType/organiztionType"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOResourceGroupType/superOrganization"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//organizationpackage/EMOResourceGroupType/principal"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//organizationpackage/EMOResourceGroupType/arrangeNumber"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//organizationpackage/EMOResourceGroupType/reserved"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOResourceGroupType/sourceAssociationRelations"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOResourceGroupType/targetComposeRelation"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOResourceGroupType/sourceComposeRelations"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOResourceGroupType/targetAssociationRelations"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOResourceGroupType/emoDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOResourceGroupType/basicResourceTypes"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOResourceGroupType/assFlows"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOResourceGroupType/empDiagram"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOResourceGroupType/colEMOGroupDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//organizationpackage/EMORelations">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//organizationpackage/EMORelations/number"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//organizationpackage/EMOAssociationRelation">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOAssociationRelation/sourceGroupType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOAssociationRelation/targetRole"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOAssociationRelation/sourceRole"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOAssociationRelation/targetGroupType"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOAssociationRelation/emoDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//organizationpackage/EMOComposeRelation">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOComposeRelation/targetGroupType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOComposeRelation/sourceGroupType"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMOComposeRelation/emoDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//organizationpackage/EMODiagram">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMODiagram/empDiagrams"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMODiagram/emrDiagrams"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMODiagram/roles"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMODiagram/resourceGroupTypes"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMODiagram/associationRelations"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//organizationpackage/EMODiagram/composeRelations"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//organizationpackage/EMOObject"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Resourcepackage" basePackage="vpml" disposableProviderFactory="true"
+        ecorePackage="NewPMBE.ecore#//resourcepackage">
+      <genClasses ecoreClass="NewPMBE.ecore#//resourcepackage/EMRResourceType"/>
+      <genClasses ecoreClass="NewPMBE.ecore#//resourcepackage/EMRBasicResourceType">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRBasicResourceType/resourceGroupTypes"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//resourcepackage/EMRBasicResourceType/costPerUnit"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//resourcepackage/EMRBasicResourceType/totalAmount"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//resourcepackage/EMRBasicResourceType/usageAmount"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//resourcepackage/EMRBasicResourceType/availableAmount"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//resourcepackage/EMRBasicResourceType/efficiency"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//resourcepackage/EMRClassificationRelation">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRClassificationRelation/emrDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRClassificationRelation/role"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRClassificationRelation/sourceAbsRoleType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRClassificationRelation/targetAbsRoleType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRClassificationRelation/locationType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRClassificationRelation/sourceAbsLocationType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRClassificationRelation/targetAbsLocationType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRClassificationRelation/toolType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRClassificationRelation/targetAbsToolType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRClassificationRelation/sourceAbsToolType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRClassificationRelation/machineType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRClassificationRelation/sourceAbsMachineType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRClassificationRelation/targetAbsMachineType"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//resourcepackage/EMRAbstractResourceType"/>
+      <genClasses ecoreClass="NewPMBE.ecore#//resourcepackage/EMRAbstractRole">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRAbstractRole/emrDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRAbstractRole/sourceClassificationRelations"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRAbstractRole/targetClassificationRelation"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//resourcepackage/EMRAbstractToolType">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRAbstractToolType/emrDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRAbstractToolType/targetClassificationRelation"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRAbstractToolType/sourceAbsClassficationRelations"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//resourcepackage/EMRAbstractMachineType">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRAbstractMachineType/emrDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRAbstractMachineType/sourceClassificationRelations"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRAbstractMachineType/targetClassificationRelation"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//resourcepackage/EMRAbstractLocationType">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRAbstractLocationType/emrDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRAbstractLocationType/sourceClassificationRelations"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRAbstractLocationType/targetClassification"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//resourcepackage/EMRToolType">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRToolType/emrDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRToolType/classificationRelation"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRToolType/empDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRToolType/assFlows"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//resourcepackage/EMRMachineType">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRMachineType/emrDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRMachineType/classificationRelation"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRMachineType/empDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRMachineType/assFlows"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRMachineType/colMachineDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//resourcepackage/EMRLocationType">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRLocationType/emrDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRLocationType/classificationRelation"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRLocationType/empDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRLocationType/assFlows"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRLocationType/colLocationDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//resourcepackage/EMRRole">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRRole/targetAssociationRelations"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRRole/sourceAssociationRelations"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRRole/emoDiagram"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRRole/belongedOrganization"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRRole/emrDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRRole/classificationRelation"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRRole/empDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRRole/assFlows"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRRole/colRoleDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//resourcepackage/EMRDiagram">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRDiagram/empDiagrams"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRDiagram/emoDiagram"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRDiagram/classificationRelations"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRDiagram/abstractLocationTypes"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRDiagram/abstractMachineTypes"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRDiagram/abstractToolTypes"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRDiagram/abstractRoles"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRDiagram/roles"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRDiagram/locationTypes"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRDiagram/machineTypes"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//resourcepackage/EMRDiagram/toolTypes"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//resourcepackage/EMRObject"/>
+      <genClasses ecoreClass="NewPMBE.ecore#//resourcepackage/EMRRelation"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Processpackage" basePackage="vpml" disposableProviderFactory="true"
+        ecorePackage="NewPMBE.ecore#//processpackage">
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPNormalActivity">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPNormalActivity/empDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPNormalActivity/assFlows"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPBatchActivity">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPBatchActivity/batchType"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPBatchActivity/batStartTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPBatchActivity/batEndTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPBatchActivity/restartPeriod"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPBatchActivity/batTimeUnit"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPBatchActivity/timerQueueFlag"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPBatchActivity/emergencyFlag"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPBatchActivity/intervalValue"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPBatchActivity/intervalTimeUnit"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPBatchActivity/maxQuantity"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPBatchActivity/minQuantity"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPActivity">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPActivity/procedure"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPActivity/creater"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPActivity/createdDate"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPActivity/lastModifier"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPActivity/lastModifiedDate"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPActivity/clockFlow"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPActivity/targetDataFlows"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPActivity/sourceDataFlows"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPActivity/refFlows"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPObject">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPObject/comActivity"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPFlow"/>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPDataFlow">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPDataFlow/probability"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDataFlow/empDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDataFlow/targetProduct"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDataFlow/targetActivity"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDataFlow/sourceProduct"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDataFlow/sourceActivity"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDataFlow/sourceInAnd"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDataFlow/targetInAnd"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDataFlow/targetInOr"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDataFlow/sourceInOr"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDataFlow/sourceOutAnd"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDataFlow/targetOutAnd"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDataFlow/sourceOutOr"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDataFlow/targetOutOr"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDataFlow/mileStone"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPAssFlow">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPAssFlow/resourceGroupType"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPAssFlow/empDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPAssFlow/product"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPAssFlow/locationType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPAssFlow/machineType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPAssFlow/role"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPAssFlow/toolType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPAssFlow/autoActivity"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPAssFlow/normalActivity"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPAssFlow/compActivity"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPAssFlow/manualBatchActivity"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPAssFlow/autoBatchActiviy"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPClockFlow">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPClockFlow/activity"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPClockFlow/clock"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPClockFlow/empDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPLogicalConnector"/>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPInAnd">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPInAnd/empDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPInAnd/sourceFlows"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPInAnd/targetFlows"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPOutAnd">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPOutAnd/empDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPOutAnd/sourceFlows"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPOutAnd/targetFlows"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPInOr">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPInOr/empDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPInOr/targetFlows"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPInOr/sourceFlows"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPOutOr">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPOutOr/empDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPOutOr/sourceFlows"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPOutOr/targetFlows"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPClock">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPClock/startTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPClock/endTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPClock/restartPeriod"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPClock/timeUnit"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPClock/tqFlag"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPClock/eFlag"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPClock/intervalValue"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPClock/intervalUnit"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPClock/clockFlows"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPClock/empDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPCompActivity">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPCompActivity/empDiagram"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPCompActivity/leafObjects"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPCompActivity/assFlows"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPInConnector"/>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPOutConnector"/>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPLeafActivity">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPLeafActivity/isDefault"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPLeafActivity/startTime"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPLeafActivity/durationTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPLeafActivity/timeUnit"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPLeafActivity/priority"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPProduct">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPProduct/targetDataFlows"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPProduct/sourceDataFlows"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPProduct/refFlows"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPProduct/assFlows"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPProductPackage">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPProductPackage/subPackages"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPProductPackage/topPackage"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPProductPackage/empDiagram"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPProductPackage/leafProducts"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPLeafProduct">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPLeafProduct/attachment"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPLeafProduct/ioType"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPLeafProduct/period"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPLeafProduct/durationTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPLeafProduct/timeUnit"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPLeafProduct/initQueue"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPLeafProduct/cost"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPLeafProduct/topProductPackage"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPRefFlow">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPRefFlow/activity"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPRefFlow/product"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPRefFlow/empDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPDocument">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDocument/empDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPArtifact">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPArtifact/empDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPOther">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPOther/empDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPAttributeItem">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPAttributeItem/type"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPAttributeItem/_depend"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPAutoActivity">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPAutoActivity/empDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPAutoActivity/assFlows"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPManualBatchActivity">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPManualBatchActivity/empDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPManualBatchActivity/assFlows"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPAutoBatchActivity">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPAutoBatchActivity/empDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPAutoBatchActivity/assFlows"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPMessage">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPMessage/empDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPDiagram">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/emoDiagrams"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/emrDiagrams"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/emcDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/emiDiagram"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPDiagram/startedTime"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/durationTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPDiagram/timeUnit"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/inOrs"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/productPackages"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/outAnds"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/dataFlows"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/clockFlows"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/clocks"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/inAnds"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/normalActivities"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/compActivities"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/outOrs"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/assFlows"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/refFlows"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/others"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/artifacts"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/forms"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/documents"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/autoActivities"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/messages"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/manualBatchActivities"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/autoBatchActivities"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/machineTypes"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/roles"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/locationTypes"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/toolTypes"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/resourceGroupTypes"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPDiagram/mileStones"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPMileStone">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//processpackage/EMPMileStone/process"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPMileStone/dataFlows"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPMileStone/empDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//processpackage/EMPForm">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPForm/empDiagram"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//processpackage/EMPForm/formType"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Utilpackage" basePackage="vpml" disposableProviderFactory="true"
+        ecorePackage="NewPMBE.ecore#//utilpackage">
+      <genEnums ecoreEnum="NewPMBE.ecore#//utilpackage/EnumTimeUnit">
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumTimeUnit/SECOND"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumTimeUnit/MINUTE"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumTimeUnit/HOUR"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumTimeUnit/DAY"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumTimeUnit/WEEK"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumTimeUnit/MONTH"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumTimeUnit/QUARTER"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumTimeUnit/YEAR"/>
+      </genEnums>
+      <genEnums ecoreEnum="NewPMBE.ecore#//utilpackage/EnumDistribution">
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumDistribution/DEFAULT"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumDistribution/CONSTANT"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumDistribution/UNIFORM"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumDistribution/NORMAL"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumDistribution/POISSION"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumDistribution/EXPONENTIAL"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumDistribution/GAMMA"/>
+      </genEnums>
+      <genEnums ecoreEnum="NewPMBE.ecore#//utilpackage/Sex">
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/Sex/man"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/Sex/woman"/>
+      </genEnums>
+      <genEnums ecoreEnum="NewPMBE.ecore#//utilpackage/EnumIOType">
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumIOType/NON_SOURCE"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumIOType/SINGLE_SOURCE"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumIOType/SEQUENCE_SOURCE"/>
+      </genEnums>
+      <genEnums ecoreEnum="NewPMBE.ecore#//utilpackage/EnumBatchType">
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumBatchType/AMOUNT_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumBatchType/TIME_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumBatchType/TIME_OR_AMOUNT"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//utilpackage/EnumBatchType/TIME_AND_AMOUNT"/>
+      </genEnums>
+      <genDataTypes ecoreDataType="NewPMBE.ecore#//utilpackage/JavaList"/>
+      <genDataTypes ecoreDataType="NewPMBE.ecore#//utilpackage/JavaDate"/>
+      <genClasses ecoreClass="NewPMBE.ecore#//utilpackage/DSDistribution">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//utilpackage/DSDistribution/type"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//utilpackage/DSDistribution/dArgument1"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//utilpackage/DSDistribution/dArgument2"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Infopackage" basePackage="vpml" disposableProviderFactory="true"
+        ecorePackage="NewPMBE.ecore#//infopackage">
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMILeafProduct">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//infopackage/EMILeafProduct/productID"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//infopackage/EMILeafProduct/attachment"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//infopackage/EMILeafProduct/iotype"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//infopackage/EMILeafProduct/interval"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//infopackage/EMILeafProduct/unit"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//infopackage/EMILeafProduct/initList"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//infopackage/EMILeafProduct/cost"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMILeafProduct/durationTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//infopackage/EMILeafProduct/database"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//infopackage/EMILeafProduct/dbTable"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//infopackage/EMILeafProduct/dbTableItem"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIDocument">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIDocument/documentDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIArtifact">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIArtifact/artifactDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIMessage">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIMessage/messageDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIOther">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIOther/otherDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIProductPackage">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//infopackage/EMIProductPackage/productList"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIProductPackage/subPackages"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIProductPackage/topPackage"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIProductPackage/productPackageDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIObject"/>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMILogicalConnector">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//infopackage/EMILogicalConnector/type"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIComInfo">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIComInfo/comInfoDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIProduct">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//infopackage/EMIProduct/procedure"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIFlow">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//infopackage/EMIFlow/direction"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//infopackage/EMIFlow/number"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIFlow/sourceNode"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIFlow/targetNode"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMINode">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMINode/targetFlow"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMINode/sourceFlow"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIRefFlow">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIRefFlow/refFlowDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIDataFlow">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIDataFlow/dataFlowDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIInConnector"/>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIOutConnector"/>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIStateConnector">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIStateConnector/stateConnectorDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIInOr">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIInOr/inorDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIInAnd">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIInAnd/inandDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIOutAnd">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIOutAnd/outandDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIOutOr">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIOutOr/outorDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//infopackage/EMIDiagram">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIDiagram/emiDiagram"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIDiagram/artifact"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIDiagram/inand"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIDiagram/inor"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIDiagram/stateConnector"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIDiagram/other"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIDiagram/productPackage"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIDiagram/outand"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIDiagram/outor"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIDiagram/refFlow"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIDiagram/document"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIDiagram/dataFlow"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIDiagram/comInfo"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//infopackage/EMIDiagram/message"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Informationpackage" basePackage="vpml" disposableProviderFactory="true"
+        ecorePackage="NewPMBE.ecore#//informationpackage">
+      <genEnums ecoreEnum="NewPMBE.ecore#//informationpackage/EMISimpleType">
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//informationpackage/EMISimpleType/String"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//informationpackage/EMISimpleType/Integer"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//informationpackage/EMISimpleType/Double"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//informationpackage/EMISimpleType/Boolean"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//informationpackage/EMISimpleType/Date"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//informationpackage/EMISimpleType/DateTime"/>
+        <genEnumLiterals ecoreEnumLiteral="NewPMBE.ecore#//informationpackage/EMISimpleType/Time"/>
+      </genEnums>
+      <genClasses ecoreClass="NewPMBE.ecore#//informationpackage/EMIComplexItem"/>
+      <genClasses ecoreClass="NewPMBE.ecore#//informationpackage/EMIForm">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//informationpackage/EMIForm/attributes"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//informationpackage/EMIEnum">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//informationpackage/EMIEnum/literals"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//informationpackage/EMIEnumLiteral">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//informationpackage/EMIEnumLiteral/literal"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//informationpackage/EMIEnumLiteral/value"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//informationpackage/EMIEnumLiteral/enum"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//informationpackage/EMISimpleAttribute">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//informationpackage/EMISimpleAttribute/type"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//informationpackage/EMIList">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//informationpackage/EMIList/attributes"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//informationpackage/EMIStatAttribute">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//informationpackage/EMIStatAttribute/expressions"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//informationpackage/EMIStatAttribute/defaultValue"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//informationpackage/EMIComplexAttribute">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//informationpackage/EMIComplexAttribute/complexType"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//informationpackage/EMIAttribute">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//informationpackage/EMIAttribute/maximun"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//informationpackage/EMIAttribute/minimum"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//informationpackage/EMIAttribute/form"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//informationpackage/EMIAttribute/list"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Collaborationpackage" basePackage="vpml" disposableProviderFactory="true"
+        ecorePackage="NewPMBE.ecore#//collaborationpackage">
+      <genClasses ecoreClass="NewPMBE.ecore#//collaborationpackage/EMCLogicalConnector"/>
+      <genClasses ecoreClass="NewPMBE.ecore#//collaborationpackage/EMCAnd">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//collaborationpackage/EMCAnd/colAndDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//collaborationpackage/EMCOR">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//collaborationpackage/EMCOR/colORDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//collaborationpackage/EMCCollaborationGroup">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//collaborationpackage/EMCCollaborationGroup/colColGroupDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//collaborationpackage/EMCDiagram">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//collaborationpackage/EMCDiagram/empDiagram"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NewPMBE.ecore#//collaborationpackage/EMCDiagram/associatePrModel"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//collaborationpackage/EMCDiagram/colAnd"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//collaborationpackage/EMCDiagram/colOR"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//collaborationpackage/EMCDiagram/colRole"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//collaborationpackage/EMCDiagram/colLocation"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//collaborationpackage/EMCDiagram/colMachine"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//collaborationpackage/EMCDiagram/colEMOGroup"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//collaborationpackage/EMCDiagram/colColGroup"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//collaborationpackage/EMCDiagram/colColRelation"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NewPMBE.ecore#//collaborationpackage/EMCDiagram/colSeqRelation"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//collaborationpackage/EMCRelation">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//collaborationpackage/EMCRelation/sourceRelationSourceObj"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference NewPMBE.ecore#//collaborationpackage/EMCRelation/targetRelationTargetObj"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//collaborationpackage/EMCCollaborationRelation">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//collaborationpackage/EMCCollaborationRelation/colColRelationDiagram"/>
+      </genClasses>
+      <genClasses ecoreClass="NewPMBE.ecore#//collaborationpackage/EMCSequenceRelation">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference NewPMBE.ecore#//collaborationpackage/EMCSequenceRelation/colSeqRelationDiagram"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

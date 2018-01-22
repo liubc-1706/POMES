@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trace:TraceModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:trace="http://www.eclipse.org/gmf/2006/Trace">
+  <nodeTraces
+      visualID="2009"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRAbstractToolType') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRDiagram') and _containmentMF_.name = 'abstractToolTypes')">
+    <nodeLabelTraces
+        visualID="5009"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2010"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRAbstractLocationType') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRDiagram') and _containmentMF_.name = 'abstractLocationTypes')">
+    <nodeLabelTraces
+        visualID="5010"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2011"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRAbstractMachineType') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRDiagram') and _containmentMF_.name = 'abstractMachineTypes')">
+    <nodeLabelTraces
+        visualID="5011"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2012"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRLocationType') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRDiagram') and _containmentMF_.name = 'locationTypes')">
+    <nodeLabelTraces
+        visualID="5012"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2013"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRMachineType') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRDiagram') and _containmentMF_.name = 'machineTypes')">
+    <nodeLabelTraces
+        visualID="5013"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2014"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRToolType') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRDiagram') and _containmentMF_.name = 'toolTypes')">
+    <nodeLabelTraces
+        visualID="5014"
+        queryText="true"/>
+  </nodeTraces>
+  <linkTraces
+      visualID="4009"
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRClassificationRelation')"/>
+  <linkTraces
+      visualID="4010"
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRClassificationRelation')"/>
+  <linkTraces
+      visualID="4011"
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRClassificationRelation')"/>
+  <linkTraces
+      visualID="4012"
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRClassificationRelation')"/>
+  <linkTraces
+      visualID="4013"
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRClassificationRelation')"/>
+  <linkTraces
+      visualID="4014"
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/resourcepackage.ecore' and _eClass_.name = 'EMRClassificationRelation')"/>
+</trace:TraceModel>

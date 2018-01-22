@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- 由 Microsoft Visio 2003, SVG Export, v1.0 生成 EMPOutAnd1.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="8.26772in"
+		height="11.6929in" viewBox="0 0 595.276 841.89" xml:space="preserve" color-interpolation-filters="sRGB" class="st3">
+	<v:documentProperties v:langID="2052" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#ffffff;stroke:#0000ff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2}
+		.st2 {fill:#3366ff;font-family:Arial;font-size:13.3333em}
+		.st3 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="SchemeName" v:val="VT4(Default)"/>
+		</v:userDefs>
+		<title>Page-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="连接线" v:index="0"/>
+		<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(0,-85.0394)">
+			<title>Circle</title>
+			<desc>OUT</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(11):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="297.638" cy="544.252" width="520.87" height="446.457"/>
+			<path d="M0 544.25 A297.638 297.638 0 0 1 595.28 544.25 A297.638 297.638 0 0 1 0 544.25 Z" class="st1"/>
+			<text x="128.76" y="592.25" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>OUT</text>		</g>
+	</g>
+</svg>

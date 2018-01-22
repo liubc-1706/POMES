@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+   <extension point="org.eclipse.core.runtime.preferences">
+      <?gmfgen generated="true"?>
+      <initializer class="newpmbe.organization.diagram.part.NewPMBEDiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.team.core.fileTypes">
+      <?gmfgen generated="true"?>
+      <fileTypes
+         type="text"
+         extension="organization_diagram">
+      </fileTypes>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <?gmfgen generated="true"?>
+      <parser
+         type="organization_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <?gmfgen generated="true"?>
+     <editor
+        id="newpmbe.organization.diagram.part.NewPMBEDiagramEditorID"
+        name="%editorName"
+        icon="icons/obj16/OrganizationpackageDiagramFile.gif"
+        extensions="organization_diagram"
+        default="true"
+        class="newpmbe.organization.diagram.part.NewPMBEDiagramEditor"
+        matchingStrategy="newpmbe.organization.diagram.part.NewPMBEMatchingStrategy"
+        contributorClass="newpmbe.organization.diagram.part.NewPMBEDiagramActionBarContributor">
+     </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/OrganizationpackageDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="newpmbe.organization.diagram.part.NewPMBECreationWizard"
+  	     id="newpmbe.organization.diagram.part.NewPMBECreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="newpmbe.organization.diagram.ui.objectContribution.IFile1"
+            nameFilter="*.organization"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="newpmbe.organization.diagram.part.NewPMBEInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="newpmbe.organization.diagram.part.NewPMBEInitDiagramFileActionID">
+         </action>
+      </objectContribution>  
+  </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.contributionItemProviders">
+      <?gmfgen generated="true"?>
+      <contributionItemProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContributionItemProvider"
+            checkPluginLoaded="false">
+         <Priority name="Low"/>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.organization.diagram.edit.parts.EMOResourceGroupTypeEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.organization.diagram.edit.parts.EMOResourceGroupTypeNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+            <popupPredefinedItem id="deleteFromModelAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.organization.diagram.edit.parts.EMRRoleEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.organization.diagram.edit.parts.EMRRoleNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+            <popupPredefinedItem id="deleteFromModelAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.organization.diagram.edit.parts.EMOComposeRelationEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.organization.diagram.edit.parts.EMOAssociationRelationEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.organization.diagram.edit.parts.EMOAssociationRelationNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+            <popupPredefinedItem id="deleteFromModelAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.organization.diagram.edit.parts.EMOAssociationRelation2EditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.organization.diagram.edit.parts.EMOAssociationRelationName2EditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+            <popupPredefinedItem id="deleteFromModelAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.organization.diagram.edit.parts.EMOAssociationRelation3EditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.organization.diagram.edit.parts.EMOAssociationRelationName3EditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+            <popupPredefinedItem id="deleteFromModelAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.organization.diagram.edit.parts.EMOAssociationRelation4EditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.organization.diagram.edit.parts.EMOAssociationRelationName4EditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+            <popupPredefinedItem id="deleteFromModelAction" remove="true"/>
+         </popupContribution>
+      </contributionItemProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="neworganizationPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="newpmbe.organization.diagram.part.NewPMBEDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="neworganizationPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="newpmbe.organization.diagram.part.NewPMBEDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="neworganizationRender">
+         <Priority name="Lowest"/>
+         <ViewId id="newpmbe.organization.diagram.part.NewPMBEDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders">
+      <?gmfgen generated="true"?>
+      <viewProvider class="newpmbe.organization.diagram.providers.NewPMBEViewProvider">
+         <Priority name="Lowest"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="neworganization"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints=""/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints=""/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="newpmbe.organization.diagram.providers.NewPMBEEditPartProvider">
+         <Priority name="Lowest"/>
+      </editpartProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="newpmbe.organization.diagram.providers.NewPMBEModelingAssistantProvider">
+         <Priority name="Lowest"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders">
+      <?gmfgen generated="true"?>
+      <IconProvider class="newpmbe.organization.diagram.providers.NewPMBEIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="newpmbe.organization.diagram.providers.NewPMBEParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes">
+      <?gmfgen generated="true"?>
+
+      <metamodel nsURI="http:///vpml/organizationpackage.ecore">
+         <metamodelType
+               id="newpmbe.organization.diagram.EMODiagram_1000"
+               name="Undefined"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EMODiagram"
+               edithelper="newpmbe.organization.diagram.edit.helpers.EMODiagramEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http:///vpml/organizationpackage.ecore">
+         <metamodelType
+               id="newpmbe.organization.diagram.EMOResourceGroupType_2003"
+               name="EMOResourceGroupType"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EMOResourceGroupType"
+               edithelper="newpmbe.organization.diagram.edit.helpers.EMOResourceGroupTypeEditHelper">
+            <param name="semanticHint" value="2003"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http:///vpml/resourcepackage.ecore">
+         <metamodelType
+               id="newpmbe.organization.diagram.EMRRole_2004"
+               name="EMRRole"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EMRRole"
+               edithelper="newpmbe.organization.diagram.edit.helpers.EMRRoleEditHelper">
+            <param name="semanticHint" value="2004"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http:///vpml/organizationpackage.ecore">
+         <metamodelType
+               id="newpmbe.organization.diagram.EMOComposeRelation_4001"
+               name="EMOComposeRelation"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EMOComposeRelation"
+               edithelper="newpmbe.organization.diagram.edit.helpers.EMOComposeRelationEditHelper">
+            <param name="semanticHint" value="4001"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http:///vpml/organizationpackage.ecore">
+         <metamodelType
+               id="newpmbe.organization.diagram.EMOAssociationRelation_4002"
+               name="EMOAssociationRelation"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EMOAssociationRelation"
+               edithelper="newpmbe.organization.diagram.edit.helpers.EMOAssociationRelationEditHelper">
+            <param name="semanticHint" value="4002"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http:///vpml/organizationpackage.ecore">
+         <specializationType
+               id="newpmbe.organization.diagram.EMOAssociationRelation_4003"
+               name="EMOAssociationRelation"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               edithelperadvice="newpmbe.organization.diagram.edit.helpers.EMOAssociationRelationEditHelperAdvice">
+            <specializes id="newpmbe.organization.diagram.EMOAssociationRelation_4002"/>
+            <param name="semanticHint" value="4003"/>
+         </specializationType>
+      </metamodel>
+
+      <metamodel nsURI="http:///vpml/organizationpackage.ecore">
+         <specializationType
+               id="newpmbe.organization.diagram.EMOAssociationRelation_4004"
+               name="EMOAssociationRelation"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               edithelperadvice="newpmbe.organization.diagram.edit.helpers.EMOAssociationRelation2EditHelperAdvice">
+            <specializes id="newpmbe.organization.diagram.EMOAssociationRelation_4002"/>
+            <param name="semanticHint" value="4004"/>
+         </specializationType>
+      </metamodel>
+
+      <metamodel nsURI="http:///vpml/organizationpackage.ecore">
+         <specializationType
+               id="newpmbe.organization.diagram.EMOAssociationRelation_4005"
+               name="EMOAssociationRelation"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               edithelperadvice="newpmbe.organization.diagram.edit.helpers.EMOAssociationRelation3EditHelperAdvice">
+            <specializes id="newpmbe.organization.diagram.EMOAssociationRelation_4002"/>
+            <param name="semanticHint" value="4005"/>
+         </specializationType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="neworganizationClientContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="newpmbe.organization.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="neworganizationClientContext">
+         <elementType ref="newpmbe.organization.diagram.EMODiagram_1000"/>
+         <elementType ref="newpmbe.organization.diagram.EMOResourceGroupType_2003"/>
+         <elementType ref="newpmbe.organization.diagram.EMRRole_2004"/>
+         <elementType ref="newpmbe.organization.diagram.EMOComposeRelation_4001"/>
+         <elementType ref="newpmbe.organization.diagram.EMOAssociationRelation_4002"/>
+         <elementType ref="newpmbe.organization.diagram.EMOAssociationRelation_4003"/>
+         <elementType ref="newpmbe.organization.diagram.EMOAssociationRelation_4004"/>
+         <elementType ref="newpmbe.organization.diagram.EMOAssociationRelation_4005"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+
+
+   <extension point="org.eclipse.ui.navigator.viewer">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension
+                  pattern="newpmbe.organization.diagram.resourceContent"/>
+            <contentExtension pattern="newpmbe.organization.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="newpmbe.organization.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+      <viewer
+            viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <popupMenu
+               allowsPlatformContributions="false"
+               id="org.eclipse.ui.navigator.ProjectExplorer#PopupMenu"></popupMenu>
+      </viewer>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent">
+      <?gmfgen generated="true"?>
+      <navigatorContent 
+            id="newpmbe.organization.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="highest" 
+            contentProvider="newpmbe.organization.diagram.navigator.NewPMBENavigatorContentProvider" 
+            labelProvider="newpmbe.organization.diagram.navigator.NewPMBENavigatorLabelProvider"
+            icon="icons/obj16/OrganizationpackageDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+               <instanceof value="org.eclipse.core.resources.IWorkspaceRoot"/>
+               <and>
+				  <instanceof value="org.eclipse.core.resources.IProject"/>
+				  <test property="newpmbe.organization.diagram.qualifiedName" value ="organization"/>
+			   </and>
+               <instanceof value="newpmbe.organization.diagram.navigator.NewPMBEAbstractNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+               <and>
+				  <instanceof value="org.eclipse.core.resources.IProject"/>
+				  <test property="newpmbe.organization.diagram.qualifiedName" value ="organization"/>
+			   </and>
+         	   <instanceof value="newpmbe.organization.diagram.navigator.NewPMBEAbstractNavigatorItem"/>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="newpmbe.organization.diagram.navigatorSorter" 
+               class="newpmbe.organization.diagram.navigator.NewPMBENavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IProject"/>
+        	         <test property="newpmbe.organization.diagram.qualifiedName" value ="organization"/>
+                  </and>
+                  <instanceof value="newpmbe.organization.diagram.navigator.NewPMBEAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <actionProvider
+            id="newpmbe.organization.diagram.navigatorActionProvider"
+            class="newpmbe.organization.diagram.navigator.NewPMBENavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="newpmbe.organization.diagram.navigator.NewPMBEAbstractNavigatorItem"/>
+           	   <and>
+				  <instanceof value="org.eclipse.core.resources.IProject"/>
+				  <test property="newpmbe.organization.diagram.qualifiedName" value ="organization"/>
+			   </and>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+   <extension point="org.eclipse.ui.navigator.linkHelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="newpmbe.organization.diagram.navigatorLinkHelper"
+            class="newpmbe.organization.diagram.navigator.NewPMBENavigatorLinkHelper">
+         <editorInputEnablement>
+            <instanceof value="org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.document.FileEditorInputProxy"/>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="newpmbe.organization.diagram.navigator.NewPMBEAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor contributorId="newpmbe.organization.diagram"
+            labelProvider="newpmbe.organization.diagram.sheet.NewPMBESheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs contributorId="newpmbe.organization.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections contributorId="newpmbe.organization.diagram">
+
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <!--don't need this
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>       
+         -->       
+
+          <propertySection id="property.section.RulerGridPropertySection" 
+             filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+             class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+             tab="property.tab.DiagramPropertySection">
+          </propertySection>              
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="newpmbe.organization.diagram.sheet.NewPMBEPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="newpmbe.organization.diagram.navigator.NewPMBEAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+      <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="newpmbe.organization.diagram.projecttester.ProjectPropertyTester"
+            id="newpmbe.organization.diagram.projectPropertyTester"
+            namespace="newpmbe.organization.diagram"
+            properties="qualifiedName"
+            type="org.eclipse.core.resources.IProject">
+      </propertyTester>
+   </extension>
+</plugin>

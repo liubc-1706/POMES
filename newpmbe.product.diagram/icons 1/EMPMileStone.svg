@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- 由 Microsoft Visio 11.0, SVG Export, v1.0 生成 EMPBatchActivity.svg 页-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="11.3478in"
+		height="11.7854in" viewBox="0 0 817.045 848.549" xml:space="preserve" color-interpolation-filters="sRGB" class="st3">
+	<v:documentProperties v:langID="2052" v:metric="true" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#f827e2;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:4.08}
+		.st2 {fill:#e8eef7;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:4.08}
+		.st3 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<g id="group4-1" transform="translate(11.6721,-4.08)" v:mID="4" v:groupContext="group">
+			<title>工作表.4</title>
+			<g id="shape2-2" v:mID="2" v:groupContext="shape" transform="translate(747.013,1323.59) rotate(180)">
+				<title>三角形</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<path d="M754.49 848.55 L350.16 475.04 L-54.17 848.55 L754.49 848.55 Z" class="st1"/>
+			</g>
+			<g id="shape1-4" v:mID="1" v:groupContext="shape" transform="translate(0,-373.506)">
+				<title>矩形</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<rect x="0" y="381.666" width="793.701" height="466.883" class="st1"/>
+			</g>
+			<g id="shape3-6" v:mID="3" v:groupContext="shape" transform="translate(140.065,-466.883)">
+				<title>矩形.3</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<rect x="0" y="568.419" width="513.571" height="280.13" class="st2"/>
+			</g>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- 由 Microsoft Visio 11.0, SVG Export, v1.0 生成 EMPBatchActivity.svg 页-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="11.8393in"
+		height="11.8393in" viewBox="0 0 852.43 852.43" xml:space="preserve" color-interpolation-filters="sRGB" class="st4">
+	<v:documentProperties v:langID="2052" v:metric="true" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#e8eef7;stroke:#00b0f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:4.08}
+		.st2 {fill:#e8eef7;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:4.08}
+		.st3 {fill:#000000;font-family:宋体;font-size:13.3333em;font-weight:bold}
+		.st4 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<g id="group3-1" transform="translate(4.08,-4.08)" v:mID="3" v:groupContext="group">
+			<title>工作表.3</title>
+			<g id="shape1-2" v:mID="1" v:groupContext="shape" transform="translate(-180.624,249.671) rotate(-45)">
+				<title>正方形</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<rect x="0" y="255.441" width="596.989" height="596.989" class="st1"/>
+			</g>
+			<g id="shape2-4" v:mID="2" v:groupContext="shape" transform="translate(239.313,-212.851)">
+				<title>正方形.2</title>
+				<desc>OUT</desc>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="182.822" cy="673.232" width="365.65" height="358.396"/>
+				<rect x="0" y="494.033" width="365.644" height="358.396" class="st2"/>
+				<text x="61.88" y="721.23" class="st3" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>OUT</text>			</g>
+		</g>
+	</g>
+</svg>

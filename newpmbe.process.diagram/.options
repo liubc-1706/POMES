@@ -1,0 +1,7 @@
+# Debugging options for the newpmbe.process.diagram plug-in
+
+# Turn on general debugging for the newpmbe.process.diagram plug-in
+newpmbe.process.diagram/debug=false
+
+# Turn on debugging of visualID processing
+newpmbe.process.diagram/debug/visualID=true

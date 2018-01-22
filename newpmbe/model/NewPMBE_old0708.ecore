@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="vpml"
+    nsURI="http:///vpml.ecore" nsPrefix="vpml">
+  <eClassifiers xsi:type="ecore:EClass" name="EMObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="EMObject是新版VPML元类的继承关系树中的基类，所有元类都是EMObject的后代。EMObject定义了作为建模元素应该有的一般属性，如ID、名称、编码、描述。"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="OID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="simOID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceObjSourceRelation"
+        upperBound="-1" eType="#//collaborationpackage/EMCRelation" eOpposite="#//collaborationpackage/EMCRelation/sourceRelationSourceObj"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetObjTargetRelation"
+        upperBound="-1" eType="#//collaborationpackage/EMCRelation" eOpposite="#//collaborationpackage/EMCRelation/targetRelationTargetObj"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EMModel" eSuperTypes="#//EMObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="EMModel标识了一个企业模型，包括活动视图、数据视图、资源视图、组织视图。在模型元素的组合关系树中EMModel是根节点。以EMModel作为起点可以遍历模型的所有元数据。"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EMDiagram" eSuperTypes="#//EMObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="EMDiagram 包括企业资源图，组织模型图，过程图和数据图。企业资源图描述资源分类树，包括资源类型定义、资源实体定义以及资源类型之间的分类关系，资源实体与基本资源类型之间的实例关系。"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creater" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="createdDate" eType="#//utilpackage/JavaDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastModifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastModifiedDate" eType="#//utilpackage/JavaDate"/>
+  </eClassifiers>
+  <eSubpackages name="organizationpackage" nsURI="http:///vpml/organizationpackage.ecore"
+      nsPrefix="vpml.organizationpackage">
+    <eClassifiers xsi:type="ecore:EClass" name="EMOResourceGroupType" eSuperTypes="#//organizationpackage/EMOObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="一个或若干个企业功能实体的集合，这些功能实体负责完成某项企业任务。组织单元可以由人员或低层组织单元组成。若干个组织单元也可以组合成更大的组织单元。组织单元的下级节点可以是组织单元和组织单元分类器。&#xD;&#xA;"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="organiztionType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="superOrganization" eType="#//organizationpackage/EMOResourceGroupType"
+          containment="true" resolveProxies="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="principal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="arrangeNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"
+          defaultValueLiteral="1"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserved" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceAssociationRelations"
+          upperBound="-1" eType="#//organizationpackage/EMOAssociationRelation" eOpposite="#//organizationpackage/EMOAssociationRelation/sourceGroupType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetComposeRelation"
+          eType="#//organizationpackage/EMOComposeRelation" eOpposite="#//organizationpackage/EMOComposeRelation/targetGroupType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceComposeRelations"
+          upperBound="-1" eType="#//organizationpackage/EMOComposeRelation" eOpposite="#//organizationpackage/EMOComposeRelation/sourceGroupType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetAssociationRelations"
+          upperBound="-1" eType="#//organizationpackage/EMOAssociationRelation" eOpposite="#//organizationpackage/EMOAssociationRelation/targetGroupType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emoDiagram" lowerBound="1"
+          eType="#//organizationpackage/EMODiagram" transient="true" eOpposite="#//organizationpackage/EMODiagram/resourceGroupTypes"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="basicResourceTypes" upperBound="-1"
+          eType="#//resourcepackage/EMRBasicResourceType" eOpposite="#//resourcepackage/EMRBasicResourceType/resourceGroupTypes"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assFlows" upperBound="-1"
+          eType="#//processpackage/EMPAssFlow" eOpposite="#//processpackage/EMPAssFlow/resourceGroupType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/resourceGroupTypes"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colEMOGroupDiagram" eType="#//collaborationpackage/EMCDiagram"
+          transient="true" eOpposite="#//collaborationpackage/EMCDiagram/colEMOGroup"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMORelations" eSuperTypes="#//EMObject">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"
+          defaultValueLiteral="1"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMOAssociationRelation" eSuperTypes="#//organizationpackage/EMORelations">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="表示人员与组织单元之间的从属关系。&#xD;&#xA;一个人员可以属于一个或者多个组织单元（也可以不属于任何组织单元），一个组织单元也可以拥有一个或者多个（也可以没有）人员。"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceGroupType" eType="#//organizationpackage/EMOResourceGroupType"
+          eOpposite="#//organizationpackage/EMOResourceGroupType/sourceAssociationRelations"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetRole" eType="#//resourcepackage/EMRRole"
+          eOpposite="#//resourcepackage/EMRRole/targetAssociationRelations"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRole" eType="#//resourcepackage/EMRRole"
+          eOpposite="#//resourcepackage/EMRRole/sourceAssociationRelations"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetGroupType" eType="#//organizationpackage/EMOResourceGroupType"
+          eOpposite="#//organizationpackage/EMOResourceGroupType/targetAssociationRelations"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emoDiagram" lowerBound="1"
+          eType="#//organizationpackage/EMODiagram" transient="true" eOpposite="#//organizationpackage/EMODiagram/associationRelations"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMOComposeRelation" eSuperTypes="#//organizationpackage/EMORelations">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="组织单元之间的上下级关系。上级必须是一个组织内一个实际的组织单元，下级可以是一个实际的组织单元，也可以是一个组织单元类别，表示一类组织单元都是它的下级。"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetGroupType" lowerBound="1"
+          eType="#//organizationpackage/EMOResourceGroupType" eOpposite="#//organizationpackage/EMOResourceGroupType/targetComposeRelation"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceGroupType" lowerBound="1"
+          eType="#//organizationpackage/EMOResourceGroupType" eOpposite="#//organizationpackage/EMOResourceGroupType/sourceComposeRelations"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emoDiagram" lowerBound="1"
+          eType="#//organizationpackage/EMODiagram" transient="true" eOpposite="#//organizationpackage/EMODiagram/composeRelations"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMODiagram" eSuperTypes="#//EMDiagram">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagrams" upperBound="-1"
+          eType="#//processpackage/EMPDiagram" eOpposite="#//processpackage/EMPDiagram/emoDiagrams"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emrDiagrams" lowerBound="1"
+          upperBound="-1" eType="#//resourcepackage/EMRDiagram" eOpposite="#//resourcepackage/EMRDiagram/emoDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="roles" upperBound="-1"
+          eType="#//resourcepackage/EMRRole" containment="true" eOpposite="#//resourcepackage/EMRRole/emoDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceGroupTypes" upperBound="-1"
+          eType="#//organizationpackage/EMOResourceGroupType" containment="true" eOpposite="#//organizationpackage/EMOResourceGroupType/emoDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="associationRelations"
+          upperBound="-1" eType="#//organizationpackage/EMOAssociationRelation" containment="true"
+          eOpposite="#//organizationpackage/EMOAssociationRelation/emoDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="composeRelations" upperBound="-1"
+          eType="#//organizationpackage/EMOComposeRelation" containment="true" eOpposite="#//organizationpackage/EMOComposeRelation/emoDiagram"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMOObject" eSuperTypes="#//EMObject"/>
+  </eSubpackages>
+  <eSubpackages name="resourcepackage" nsURI="http:///vpml/resourcepackage.ecore"
+      nsPrefix="vpml.resourcepackage">
+    <eClassifiers xsi:type="ecore:EClass" name="EMRResourceType" eSuperTypes="#//resourcepackage/EMRObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMRResourceType定义资源的一种类型，资源类型可以嵌套定义，既可以有子类型，也可以有父类型，各种资源类型通过EMRResourceClassificationRelationship关联到一起构成企业的资源分类图。"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMRBasicResourceType" eSuperTypes="#//resourcepackage/EMRResourceType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMRBasicResourceType描述企业资源的最基本类型，处于资源分类层次的最低层，不可以再分类，但可以对多个基本资源类型进行抽象，成为EMRAbstractResourceType，由于对资源可以采用多种分类方式，所以允许资源类型之间的多重继承。EMRBasiceResourceType与EMRAbstractResourceType形成企业的资源分类有向图。&#xD;&#xA;EMRBasicResourceType通过EMRInstanceRelationship与EMRResourceEntity关联，从而访问属于该基本类型的资源实体。"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceGroupTypes" upperBound="-1"
+          eType="#//organizationpackage/EMOResourceGroupType" eOpposite="#//organizationpackage/EMOResourceGroupType/basicResourceTypes"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="costPerUnit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"
+          defaultValueLiteral="10">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="资源的价格"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalAmount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"
+          defaultValueLiteral="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="企业拥有该类资源的总量"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="usageAmount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"
+          defaultValueLiteral="1"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="availableAmount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"
+          defaultValueLiteral="1"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="efficiency" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"
+          defaultValueLiteral="1"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMRClassificationRelation" eSuperTypes="#//resourcepackage/EMRRelation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMRResourceClassificationRelationship定义资源类型之间的分类关系。允许企业资源的多种分类方式，所以一个抽象资源类型可以有多个子类型，也可以有多个父类型。"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emrDiagram" lowerBound="1"
+          eType="#//resourcepackage/EMRDiagram" transient="true" eOpposite="#//resourcepackage/EMRDiagram/classificationRelations"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="role" eType="#//resourcepackage/EMRRole"
+          eOpposite="#//resourcepackage/EMRRole/classificationRelation"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceAbsRoleType" eType="#//resourcepackage/EMRAbstractRole"
+          eOpposite="#//resourcepackage/EMRAbstractRole/sourceClassificationRelations"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetAbsRoleType" eType="#//resourcepackage/EMRAbstractRole"
+          eOpposite="#//resourcepackage/EMRAbstractRole/targetClassificationRelation"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="locationType" eType="#//resourcepackage/EMRLocationType"
+          eOpposite="#//resourcepackage/EMRLocationType/classificationRelation"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceAbsLocationType"
+          eType="#//resourcepackage/EMRAbstractLocationType" eOpposite="#//resourcepackage/EMRAbstractLocationType/sourceClassificationRelations"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetAbsLocationType"
+          eType="#//resourcepackage/EMRAbstractLocationType" eOpposite="#//resourcepackage/EMRAbstractLocationType/targetClassification"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="toolType" eType="#//resourcepackage/EMRToolType"
+          eOpposite="#//resourcepackage/EMRToolType/classificationRelation"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetAbsToolType" eType="#//resourcepackage/EMRAbstractToolType"
+          eOpposite="#//resourcepackage/EMRAbstractToolType/targetClassificationRelation"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceAbsToolType" eType="#//resourcepackage/EMRAbstractToolType"
+          eOpposite="#//resourcepackage/EMRAbstractToolType/sourceAbsClassficationRelations"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="machineType" eType="#//resourcepackage/EMRMachineType"
+          eOpposite="#//resourcepackage/EMRMachineType/classificationRelation"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceAbsMachineType"
+          eType="#//resourcepackage/EMRAbstractMachineType" eOpposite="#//resourcepackage/EMRAbstractMachineType/sourceClassificationRelations"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetAbsMachineType"
+          eType="#//resourcepackage/EMRAbstractMachineType" eOpposite="#//resourcepackage/EMRAbstractMachineType/targetClassificationRelation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMRAbstractResourceType" eSuperTypes="#//resourcepackage/EMRResourceType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMRAbstractResourceType从资源分类的角度描述企业的资源类型，是企业资源的一个抽像类型，与EMRBasicResourceType不同，EMRAbstractResourceType没有实际的资源实体。&#xD;&#xA;可以用EMRResourceClassificationRelationship对EMRAbstractResourceType再分类，也可以把多个EMRAbstractResourceType组合在一起，抽象出一更高层的资源类型，形成企业的资源分类图。"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMRAbstractRole" eSuperTypes="#//resourcepackage/EMRAbstractResourceType">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emrDiagram" lowerBound="1"
+          eType="#//resourcepackage/EMRDiagram" transient="true" eOpposite="#//resourcepackage/EMRDiagram/abstractRoles"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceClassificationRelations"
+          upperBound="-1" eType="#//resourcepackage/EMRClassificationRelation" eOpposite="#//resourcepackage/EMRClassificationRelation/sourceAbsRoleType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetClassificationRelation"
+          eType="#//resourcepackage/EMRClassificationRelation" eOpposite="#//resourcepackage/EMRClassificationRelation/targetAbsRoleType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMRAbstractToolType" eSuperTypes="#//resourcepackage/EMRAbstractResourceType">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emrDiagram" lowerBound="1"
+          eType="#//resourcepackage/EMRDiagram" transient="true" eOpposite="#//resourcepackage/EMRDiagram/abstractToolTypes"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetClassificationRelation"
+          eType="#//resourcepackage/EMRClassificationRelation" eOpposite="#//resourcepackage/EMRClassificationRelation/targetAbsToolType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceAbsClassficationRelations"
+          upperBound="-1" eType="#//resourcepackage/EMRClassificationRelation" eOpposite="#//resourcepackage/EMRClassificationRelation/sourceAbsToolType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMRAbstractMachineType" eSuperTypes="#//resourcepackage/EMRAbstractResourceType">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emrDiagram" lowerBound="1"
+          eType="#//resourcepackage/EMRDiagram" transient="true" eOpposite="#//resourcepackage/EMRDiagram/abstractMachineTypes"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceClassificationRelations"
+          upperBound="-1" eType="#//resourcepackage/EMRClassificationRelation" eOpposite="#//resourcepackage/EMRClassificationRelation/sourceAbsMachineType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetClassificationRelation"
+          eType="#//resourcepackage/EMRClassificationRelation" eOpposite="#//resourcepackage/EMRClassificationRelation/targetAbsMachineType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMRAbstractLocationType" eSuperTypes="#//resourcepackage/EMRAbstractResourceType">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emrDiagram" lowerBound="1"
+          eType="#//resourcepackage/EMRDiagram" transient="true" eOpposite="#//resourcepackage/EMRDiagram/abstractLocationTypes"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceClassificationRelations"
+          upperBound="-1" eType="#//resourcepackage/EMRClassificationRelation" eOpposite="#//resourcepackage/EMRClassificationRelation/sourceAbsLocationType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetClassification"
+          eType="#//resourcepackage/EMRClassificationRelation" eOpposite="#//resourcepackage/EMRClassificationRelation/targetAbsLocationType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMRToolType" eSuperTypes="#//resourcepackage/EMRBasicResourceType">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emrDiagram" lowerBound="1"
+          eType="#//resourcepackage/EMRDiagram" transient="true" eOpposite="#//resourcepackage/EMRDiagram/toolTypes"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="classificationRelation"
+          lowerBound="1" eType="#//resourcepackage/EMRClassificationRelation" eOpposite="#//resourcepackage/EMRClassificationRelation/toolType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/toolTypes"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assFlows" upperBound="-1"
+          eType="#//processpackage/EMPAssFlow" eOpposite="#//processpackage/EMPAssFlow/toolType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMRMachineType" eSuperTypes="#//resourcepackage/EMRBasicResourceType">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emrDiagram" lowerBound="1"
+          eType="#//resourcepackage/EMRDiagram" transient="true" eOpposite="#//resourcepackage/EMRDiagram/machineTypes"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="classificationRelation"
+          lowerBound="1" eType="#//resourcepackage/EMRClassificationRelation" eOpposite="#//resourcepackage/EMRClassificationRelation/machineType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/machineTypes"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assFlows" upperBound="-1"
+          eType="#//processpackage/EMPAssFlow" eOpposite="#//processpackage/EMPAssFlow/machineType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colMachineDiagram" eType="#//collaborationpackage/EMCDiagram"
+          transient="true" eOpposite="#//collaborationpackage/EMCDiagram/colMachine"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMRLocationType" eSuperTypes="#//resourcepackage/EMRBasicResourceType">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emrDiagram" lowerBound="1"
+          eType="#//resourcepackage/EMRDiagram" transient="true" eOpposite="#//resourcepackage/EMRDiagram/locationTypes"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="classificationRelation"
+          lowerBound="1" eType="#//resourcepackage/EMRClassificationRelation" eOpposite="#//resourcepackage/EMRClassificationRelation/locationType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/locationTypes"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assFlows" upperBound="-1"
+          eType="#//processpackage/EMPAssFlow" eOpposite="#//processpackage/EMPAssFlow/locationType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colLocationDiagram" eType="#//collaborationpackage/EMCDiagram"
+          transient="true" eOpposite="#//collaborationpackage/EMCDiagram/colLocation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMRRole" eSuperTypes="#//resourcepackage/EMRBasicResourceType">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetAssociationRelations"
+          upperBound="-1" eType="#//organizationpackage/EMOAssociationRelation" eOpposite="#//organizationpackage/EMOAssociationRelation/targetRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceAssociationRelations"
+          upperBound="-1" eType="#//organizationpackage/EMOAssociationRelation" eOpposite="#//organizationpackage/EMOAssociationRelation/sourceRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emoDiagram" lowerBound="1"
+          eType="#//organizationpackage/EMODiagram" transient="true" eOpposite="#//organizationpackage/EMODiagram/roles"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="belongedOrganization"
+          eType="#//organizationpackage/EMOResourceGroupType" containment="true" resolveProxies="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emrDiagram" lowerBound="1"
+          eType="#//resourcepackage/EMRDiagram" transient="true" eOpposite="#//resourcepackage/EMRDiagram/roles"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="classificationRelation"
+          eType="#//resourcepackage/EMRClassificationRelation" eOpposite="#//resourcepackage/EMRClassificationRelation/role"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/roles"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assFlows" upperBound="-1"
+          eType="#//processpackage/EMPAssFlow" eOpposite="#//processpackage/EMPAssFlow/role"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colRoleDiagram" eType="#//collaborationpackage/EMCDiagram"
+          transient="true" eOpposite="#//collaborationpackage/EMCDiagram/colRole"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMRDiagram" eSuperTypes="#//EMDiagram">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagrams" upperBound="-1"
+          eType="#//processpackage/EMPDiagram" eOpposite="#//processpackage/EMPDiagram/emrDiagrams"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emoDiagram" lowerBound="1"
+          eType="#//organizationpackage/EMODiagram" eOpposite="#//organizationpackage/EMODiagram/emrDiagrams"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="classificationRelations"
+          upperBound="-1" eType="#//resourcepackage/EMRClassificationRelation" containment="true"
+          eOpposite="#//resourcepackage/EMRClassificationRelation/emrDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="abstractLocationTypes"
+          upperBound="-1" eType="#//resourcepackage/EMRAbstractLocationType" containment="true"
+          eOpposite="#//resourcepackage/EMRAbstractLocationType/emrDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="abstractMachineTypes"
+          upperBound="-1" eType="#//resourcepackage/EMRAbstractMachineType" containment="true"
+          eOpposite="#//resourcepackage/EMRAbstractMachineType/emrDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="abstractToolTypes" upperBound="-1"
+          eType="#//resourcepackage/EMRAbstractToolType" containment="true" eOpposite="#//resourcepackage/EMRAbstractToolType/emrDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="abstractRoles" upperBound="-1"
+          eType="#//resourcepackage/EMRAbstractRole" containment="true" eOpposite="#//resourcepackage/EMRAbstractRole/emrDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="roles" upperBound="-1"
+          eType="#//resourcepackage/EMRRole" containment="true" eOpposite="#//resourcepackage/EMRRole/emrDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="locationTypes" upperBound="-1"
+          eType="#//resourcepackage/EMRLocationType" containment="true" eOpposite="#//resourcepackage/EMRLocationType/emrDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="machineTypes" upperBound="-1"
+          eType="#//resourcepackage/EMRMachineType" containment="true" eOpposite="#//resourcepackage/EMRMachineType/emrDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="toolTypes" upperBound="-1"
+          eType="#//resourcepackage/EMRToolType" containment="true" eOpposite="#//resourcepackage/EMRToolType/emrDiagram"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMRObject" eSuperTypes="#//EMObject"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EMRRelation" eSuperTypes="#//resourcepackage/EMRObject"/>
+  </eSubpackages>
+  <eSubpackages name="processpackage" nsURI="http:///vpml/processpackage.ecore" nsPrefix="vpml.processpackage">
+    <eClassifiers xsi:type="ecore:EClass" name="EMPNormalActivity" eSuperTypes="#//processpackage/EMPLeafActivity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMPNormalActivity（一般活动）继承自叶活动，表示非批处理的活动"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/normalActivitys"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assFlows" upperBound="-1"
+          eType="#//processpackage/EMPAssFlow" eOpposite="#//processpackage/EMPAssFlow/normalActivity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPBatchActivity" eSuperTypes="#//processpackage/EMPLeafActivity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMPBatchActivity（批处理活动），按批量同时处理多个输入产品"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="batchType" eType="#//utilpackage/EnumBatchType"
+          defaultValueLiteral="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="批处理类型"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="endTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"
+          defaultValueLiteral="0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="批处理活动结束时间"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="restartPeriod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"
+          defaultValueLiteral="0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="重做周期"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="timerQueueFlag" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+          defaultValueLiteral="false">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="时钟队列标志"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="emergencyFlag" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+          defaultValueLiteral="false">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="紧急状况标志"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="intervalValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"
+          defaultValueLiteral="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="时间间隔"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="intervalTimeUnit" eType="#//utilpackage/EnumTimeUnit"
+          defaultValueLiteral="2">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="时间间隔单位"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxQuantity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"
+          defaultValueLiteral="10">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="数量最大值"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="minQuantity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"
+          defaultValueLiteral="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="数量最小值"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPActivity" eSuperTypes="#//processpackage/EMPObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="活动表示过程中要执行的工作，因此活动是VPML语言的核心。&#xD;&#xA;EMPActivity是组合活动（子过程）和叶活动的基类，记录所有类型活动的共有属性和操作。"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="procedure" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="与产品相关的过程步骤的文字描述"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="creater" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="创建者"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="createdDate" eType="#//utilpackage/JavaDate">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="创建日期"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastModifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="最近修改者"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastModifiedDate" eType="#//utilpackage/JavaDate">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="最近修改时间"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="clockFlows" upperBound="-1"
+          eType="#//processpackage/EMPClockFlow" eOpposite="#//processpackage/EMPClockFlow/activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetDataFlows" upperBound="-1"
+          eType="#//processpackage/EMPDataFlow" eOpposite="#//processpackage/EMPDataFlow/targetActivity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceDataFlows" upperBound="-1"
+          eType="#//processpackage/EMPDataFlow" eOpposite="#//processpackage/EMPDataFlow/sourceActivity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="refFlows" upperBound="-1"
+          eType="#//processpackage/EMPRefFlow" eOpposite="#//processpackage/EMPRefFlow/activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPObject" eSuperTypes="#//EMObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMPObject是过程模型中所有对象的基类，它继承自企业模型基本对象。&#xD;&#xA;每一个EMPObject都记录了其父节点，即其所在的组合活动"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="comActivity" eType="#//processpackage/EMPCompActivity"
+          transient="true" eOpposite="#//processpackage/EMPCompActivity/leafObjects"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPFlow" eSuperTypes="#//processpackage/EMPObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMPFlow（流连接）不仅用在建立VPML对象间的联系，而且还用在活动间传送产品信息，帮助协调活动的调度。&#xD;&#xA;共有四种流连接：数据流连接（EMPDataFlow），时钟连接（EMPClock）、引用连接（EMPRefFlow）和关联连接（EMPAssFlow）。&#xD;&#xA;"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPDataFlow" eSuperTypes="#//processpackage/EMPFlow">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMPDataFlow（数据流连接）是有向的连接，用带箭头的连线指示信息流的方向。&#xD;&#xA;根据流前后的节点不同，将数据流具体分为了活动到产品、活动到输出逻辑连接符、产品到活动、产品到输入逻辑连接符、输出逻辑连接符到产品、输出逻辑连接符到输出逻辑连接符、输入逻辑连接符到活动、输入逻辑连接符到输入逻辑连接符、产品到里程碑这九种连接流。&#xD;&#xA;这九种流在图形表示上都是一样的，只是为了方便实现，因此予以区分。"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/dataFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetProduct" eType="#//processpackage/EMPProduct"
+          eOpposite="#//processpackage/EMPProduct/targetDataFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetActivity" eType="#//processpackage/EMPActivity"
+          eOpposite="#//processpackage/EMPActivity/targetDataFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceProduct" eType="#//processpackage/EMPProduct"
+          eOpposite="#//processpackage/EMPProduct/sourceDataFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceActivity" eType="#//processpackage/EMPActivity"
+          eOpposite="#//processpackage/EMPActivity/sourceDataFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceInAnd" eType="#//processpackage/EMPInAnd"
+          eOpposite="#//processpackage/EMPInAnd/sourceFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetInAnd" eType="#//processpackage/EMPInAnd"
+          eOpposite="#//processpackage/EMPInAnd/targetFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetInOr" eType="#//processpackage/EMPInOr"
+          eOpposite="#//processpackage/EMPInOr/targetFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceInOr" eType="#//processpackage/EMPInOr"
+          eOpposite="#//processpackage/EMPInOr/sourceFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceOutAnd" eType="#//processpackage/EMPOutAnd"
+          eOpposite="#//processpackage/EMPOutAnd/sourceFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetOutAnd" eType="#//processpackage/EMPOutAnd"
+          eOpposite="#//processpackage/EMPOutAnd/targetFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceOutOr" eType="#//processpackage/EMPOutOr"
+          eOpposite="#//processpackage/EMPOutOr/sourceFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetOutOr" eType="#//processpackage/EMPOutOr"
+          eOpposite="#//processpackage/EMPOutOr/targetFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="mileStone" eType="#//processpackage/EMPMileStone"
+          eOpposite="#//processpackage/EMPMileStone/dataFlows"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPAssFlow" eSuperTypes="#//processpackage/EMPFlow">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMPAssFlow表示从资源或人到活动（叶活动、组合活动）的连接&#xD;&#xA;资源可以是资源组(EMPResourceGroup)、基本资源类型(EMRBasicResourceType)&#xD;&#xA;人可以是组织模型中的角色(EMORole)、过程模型中的EMPTeam&#xD;&#xA;关联连接的iNumber表示其所连活动所需资源（组）/角色/Team的数量。"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceGroupType" eType="#//organizationpackage/EMOResourceGroupType"
+          eOpposite="#//organizationpackage/EMOResourceGroupType/assFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/assFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="product" eType="#//processpackage/EMPProduct"
+          eOpposite="#//processpackage/EMPProduct/assFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="locationType" eType="#//resourcepackage/EMRLocationType"
+          eOpposite="#//resourcepackage/EMRLocationType/assFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="machineType" eType="#//resourcepackage/EMRMachineType"
+          eOpposite="#//resourcepackage/EMRMachineType/assFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="role" eType="#//resourcepackage/EMRRole"
+          eOpposite="#//resourcepackage/EMRRole/assFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="toolType" eType="#//resourcepackage/EMRToolType"
+          eOpposite="#//resourcepackage/EMRToolType/assFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="autoActivity" eType="#//processpackage/EMPAutoActivity"
+          eOpposite="#//processpackage/EMPAutoActivity/assFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="normalActivity" eType="#//processpackage/EMPNormalActivity"
+          eOpposite="#//processpackage/EMPNormalActivity/assFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="compActivity" eType="#//processpackage/EMPCompActivity"
+          eOpposite="#//processpackage/EMPCompActivity/assFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="manualBatchActivity"
+          eType="#//processpackage/EMPManualBatchActivity" eOpposite="#//processpackage/EMPManualBatchActivity/assFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="autoBatchActiviy" eType="#//processpackage/EMPAutoBatchActivity"
+          eOpposite="#//processpackage/EMPAutoBatchActivity/assFlows"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPClockFlow" eSuperTypes="#//processpackage/EMPFlow">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMPClockFlow（时钟连接）是从时钟到活动的有向连接。&#xD;&#xA;模拟过程中，时钟连接每隔一个规定的时间间隔发出一个消息。只有当消息到达后，活动才会被激活。它通常用于模拟周期性的活动。&#xD;&#xA;时钟连接的iNumber=1，且不能修改。"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
+          eType="#//processpackage/EMPActivity" eOpposite="#//processpackage/EMPActivity/clockFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="clock" lowerBound="1"
+          eType="#//processpackage/EMPClock" eOpposite="#//processpackage/EMPClock/clockFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/clockFlows"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPLogicalConnector" eSuperTypes="#//processpackage/EMPObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="在过程中，允许使用不同的数据流连接符以实现过程图中不同的数据流通路。这里定义四种逻辑连接符：&quot;输入或&quot;、&quot;输入与&quot;、&quot;输出或&quot;、&quot;输出与&quot;。&#xD;&#xA;EMPLogicalConnector（逻辑连接符）是其基类。"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPInAnd" eSuperTypes="#//processpackage/EMPInConnector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMPInAnd（输入与连接符）允许来自多个输入产品的数据流连接。当资源可用并且所有其它的连接（例如，时钟连接）得到满足时，若连接到&quot;输入与&quot;的每个输入产品中都到达时，活动将被激活。"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/inAnds"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceFlows" upperBound="-1"
+          eType="#//processpackage/EMPDataFlow" eOpposite="#//processpackage/EMPDataFlow/sourceInAnd"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetFlows" upperBound="-1"
+          eType="#//processpackage/EMPDataFlow" eOpposite="#//processpackage/EMPDataFlow/targetInAnd"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPOutAnd" eSuperTypes="#//processpackage/EMPOutConnector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMPOutAnd（输出与）表示将活动产生的一个输出数据作为输入，同时输出多个数据流。"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/outAnds"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceFlows" upperBound="-1"
+          eType="#//processpackage/EMPDataFlow" eOpposite="#//processpackage/EMPDataFlow/sourceOutAnd"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetFlows" upperBound="-1"
+          eType="#//processpackage/EMPDataFlow" eOpposite="#//processpackage/EMPDataFlow/targetOutAnd"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPInOr" eSuperTypes="#//processpackage/EMPInConnector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMPInOr（输入或连接符）允许从多个输入产品到单一的活动有多个数据流输入。当资源可用并且所有其它的的连接（例如，时钟连接）得到满足时，若连接到&quot;输入或&quot;的每个输入产品中任何一个到达时，活动将被激活。"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/inOrs"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetFlows" upperBound="-1"
+          eType="#//processpackage/EMPDataFlow" eOpposite="#//processpackage/EMPDataFlow/targetInOr"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceFlows" upperBound="-1"
+          eType="#//processpackage/EMPDataFlow" eOpposite="#//processpackage/EMPDataFlow/sourceInOr"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPOutOr" eSuperTypes="#//processpackage/EMPOutConnector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMPOutOr（输出或）表示将活动产生的一个输出数据作为输入，仅向一个输出数据流输出产品。&#xD;&#xA;一个输出或所连接的所有输出连接流上的概率值（iProbability）应为1000。"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/outOrs"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceFlows" upperBound="-1"
+          eType="#//processpackage/EMPDataFlow" eOpposite="#//processpackage/EMPDataFlow/sourceOutOr"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetFlows" upperBound="-1"
+          eType="#//processpackage/EMPDataFlow" eOpposite="#//processpackage/EMPDataFlow/targetOutOr"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPClock" eSuperTypes="#//processpackage/EMPObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMPClock（时钟）用于控制周期事件或定时发生的事件。它通过时钟连接流（EMPClockFlow）和叶活动相连。&#xD;&#xA;时钟的属性主要用于模拟时对相关活动的时间控制。"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+          defaultValueLiteral="0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="开始时间：在模拟时钟周期中，时钟第一次发送信号的时间。缺省时间是模拟开始的时间。开始时间在重做周期中计算。"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="endTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+          defaultValueLiteral="0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="在模拟时钟周期中，时钟停止发送信号的时间。缺省时间是模拟开始的时间，也就是说时钟只发送一个信号。结束时间在一个重启动周期中计算。"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="restartPeriod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+          defaultValueLiteral="0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="是时钟回0之前的时间值。开始时间和结束时间仅在重做周期内起作用。"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeUnit" eType="#//utilpackage/EnumTimeUnit"
+          defaultValueLiteral="2">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="时间单位"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="tqFlag" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="时钟队列标志"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="eFlag" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="紧急状况标志"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="intervalValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+          defaultValueLiteral="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="时钟两次发送数据的十进制时间值。如果此值大于0，时钟在指定的时间间隔重复开始一个活动。如果此值等于0，时钟将只传送一次数据。"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="intervalUnit" eType="#//utilpackage/EnumTimeUnit">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="时间间隔单位"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="clockFlows" upperBound="-1"
+          eType="#//processpackage/EMPClockFlow" eOpposite="#//processpackage/EMPClockFlow/clock"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/clocks"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPCompActivity" eSuperTypes="#//processpackage/EMPActivity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMPCompActivity（组合活动）相当于子过程。EMPCompActivity支持活动的分层定义，允许过程定义者在不同的细化层次上进行过程定义。一个EMPCompActivity可以包含一个完整的过程图（子图），该子图由手工活动、自动活动、批处理活动、自动批处理活动、其他组合活动、连接、产品和资源所组成。&#xD;&#xA;"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/compActivitys"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="leafObjects" upperBound="-1"
+          eType="#//processpackage/EMPObject" containment="true" eOpposite="#//processpackage/EMPObject/comActivity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assFlows" upperBound="-1"
+          eType="#//processpackage/EMPAssFlow" eOpposite="#//processpackage/EMPAssFlow/compActivity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPInConnector" eSuperTypes="#//processpackage/EMPLogicalConnector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMPInConnector（输入逻辑连接符）是输入与、输入或的基类。&#xD;&#xA;产品通过EMPProToIn和输入逻辑连接符相连；&#xD;&#xA;输入与、输入或之间通过EMPInToIn相连；&#xD;&#xA;输入逻辑连接符可以通过EMPInToAct和叶活动相连"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPOutConnector" eSuperTypes="#//processpackage/EMPLogicalConnector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMPOutConnector（输出逻辑连接符）是输出与、输出或的基类。&#xD;&#xA;活动通过EMPActToOut和输出逻辑连接符相连；&#xD;&#xA;输出与、输出或之间通过EMPOutToOut相连；&#xD;&#xA;输出逻辑连接符可以通过EMPOutToPro和产品相连"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPLeafActivity" eSuperTypes="#//processpackage/EMPActivity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMPLeafActivity（叶活动）是手工活动、自动活动、批处理活动的基类，它相当于原子活动，不可以再包含其他活动。&#xD;&#xA;EMPLeafActivity具有所有叶活动的基本属性，如开始时间、结束时间、优先级等等。&#xD;&#xA;EMPLeafActivity和下列各项连接是合法的：&#xD;&#xA;1、从基本资源类型到手工活动任意数目的关联连接。在过程模型通过完整性检查（也就是过程能被模拟）之前，手工活动必须与一个以上的角色相关联。  &#xD;&#xA;2、从产品、&quot;输入或&quot;和 &quot;输出与&quot;到手工活动任意数目的数据流连接。&#xD;&#xA;3、从时钟到活动单一数目的输入连接。&#xD;&#xA;4、从产品到活动任意数目的引用连接。&#xD;&#xA;5、从活动到产品、&quot;输出与&quot; 和&quot;输出或&quot; 任意数目的数据流连接。 "/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDefault" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+          defaultValueLiteral="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="是否为缺省值"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTime" eType="#//utilpackage/JavaDate">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="开始时间"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="durationTime" eType="#//utilpackage/DSDistribution"
+          containment="true" resolveProxies="false">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="活动持续时间：完成该活动所需的时间。它可以用常量分布、均匀分布、正态分布、泊松分布、指数分布和Gamma分布来定义，其缺省值为常量分布，值为10，单位为小时"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeUnit" eType="#//utilpackage/EnumTimeUnit"
+          defaultValueLiteral="2">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="持续时间的时间单位。（秒、分、小时、天、月、年）"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+          defaultValueLiteral="50">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="优先级。活动最高优先级是1级〔缺值为50〕。用于解决活动调度中的资源冲突问题。"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPProduct" eSuperTypes="#//processpackage/EMPObject">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetDataFlows" upperBound="-1"
+          eType="#//processpackage/EMPDataFlow" eOpposite="#//processpackage/EMPDataFlow/targetProduct"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceDataFlows" upperBound="-1"
+          eType="#//processpackage/EMPDataFlow" eOpposite="#//processpackage/EMPDataFlow/sourceProduct"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="refFlows" upperBound="-1"
+          eType="#//processpackage/EMPRefFlow" eOpposite="#//processpackage/EMPRefFlow/product"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assFlows" upperBound="-1"
+          eType="#//processpackage/EMPAssFlow" eOpposite="#//processpackage/EMPAssFlow/product"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPProductPackage" eSuperTypes="#//processpackage/EMPProduct">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subPackages" upperBound="-1"
+          eType="#//processpackage/EMPProductPackage" containment="true" eOpposite="#//processpackage/EMPProductPackage/topPackage"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="topPackage" eType="#//processpackage/EMPProductPackage"
+          transient="true" eOpposite="#//processpackage/EMPProductPackage/subPackages"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/productPackages"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="leafProducts" upperBound="-1"
+          eType="#//processpackage/EMPLeafProduct" containment="true" eOpposite="#//processpackage/EMPLeafProduct/topProductPackage"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPLeafProduct" eSuperTypes="#//processpackage/EMPProduct">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="productID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="产品的唯一标识"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="attachment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="记录附件名（句柄）"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ioType" eType="#//utilpackage/EnumIOType"
+          defaultValueLiteral="0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="输入产品的类型，包括非源类型，单一类型和连续类型"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="period" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"
+          defaultValueLiteral="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="时间间隔(周期)"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="durationTime" eType="#//utilpackage/DSDistribution"
+          containment="true" resolveProxies="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeUnit" eType="#//utilpackage/EnumTimeUnit"
+          defaultValueLiteral="2">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="单位，为小时，分，秒等"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="initQueue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"
+          defaultValueLiteral="0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="初始化队列"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="cost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"
+          defaultValueLiteral="0.0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="原材料费用"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="topProductPackage" eType="#//processpackage/EMPProductPackage"
+          transient="true" eOpposite="#//processpackage/EMPProductPackage/leafProducts"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPRefFlow" eSuperTypes="#//processpackage/EMPFlow">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
+          eType="#//processpackage/EMPActivity" eOpposite="#//processpackage/EMPActivity/refFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="product" lowerBound="1"
+          eType="#//processpackage/EMPProduct" eOpposite="#//processpackage/EMPProduct/refFlows"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/refFlows"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPDocument" eSuperTypes="#//processpackage/EMPLeafProduct">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/documents"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPArtifact" eSuperTypes="#//processpackage/EMPLeafProduct">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/artifacts"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPOther" eSuperTypes="#//processpackage/EMPLeafProduct">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/others"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPAttributeItem" eSuperTypes="#//processpackage/EMPObject">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="_depend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPAutoActivity" eSuperTypes="#//processpackage/EMPLeafActivity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&#xD;&#xA;&#xD;&#xA;备注：其实是AutoAcitivy自动活动"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/autoActivitys"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assFlows" upperBound="-1"
+          eType="#//processpackage/EMPAssFlow" eOpposite="#//processpackage/EMPAssFlow/autoActivity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPManualBatchActivity" eSuperTypes="#//processpackage/EMPBatchActivity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/manualBatchActivitys"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assFlows" upperBound="-1"
+          eType="#//processpackage/EMPAssFlow" eOpposite="#//processpackage/EMPAssFlow/manualBatchActivity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPAutoBatchActivity" eSuperTypes="#//processpackage/EMPBatchActivity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/autoBatchActivitys"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assFlows" upperBound="-1"
+          eType="#//processpackage/EMPAssFlow" eOpposite="#//processpackage/EMPAssFlow/autoBatchActiviy"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPMessage" eSuperTypes="#//processpackage/EMPLeafProduct">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/messages"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPDiagram" eSuperTypes="#//EMDiagram">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emoDiagrams" lowerBound="1"
+          upperBound="-1" eType="#//organizationpackage/EMODiagram" eOpposite="#//organizationpackage/EMODiagram/empDiagrams"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emrDiagrams" lowerBound="1"
+          upperBound="-1" eType="#//resourcepackage/EMRDiagram" eOpposite="#//resourcepackage/EMRDiagram/empDiagrams"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emcDiagram" eType="#//collaborationpackage/EMCDiagram"
+          eOpposite="#//collaborationpackage/EMCDiagram/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="emiDiagram" eType="#//infopackage/EMIDiagram"
+          eOpposite="#//infopackage/EMIDiagram/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="startedTime" eType="#//utilpackage/JavaDate"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="durationTime" eType="#//utilpackage/EnumDistribution"
+          defaultValueLiteral="1"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeUnit" eType="#//utilpackage/EnumTimeUnit"
+          defaultValueLiteral="2"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inOrs" upperBound="-1"
+          eType="#//processpackage/EMPInOr" containment="true" eOpposite="#//processpackage/EMPInOr/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="productPackages" upperBound="-1"
+          eType="#//processpackage/EMPProductPackage" containment="true" eOpposite="#//processpackage/EMPProductPackage/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outAnds" upperBound="-1"
+          eType="#//processpackage/EMPOutAnd" containment="true" eOpposite="#//processpackage/EMPOutAnd/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataFlows" upperBound="-1"
+          eType="#//processpackage/EMPDataFlow" containment="true" eOpposite="#//processpackage/EMPDataFlow/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="clockFlows" upperBound="-1"
+          eType="#//processpackage/EMPClockFlow" containment="true" eOpposite="#//processpackage/EMPClockFlow/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="clocks" upperBound="-1"
+          eType="#//processpackage/EMPClock" containment="true" eOpposite="#//processpackage/EMPClock/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inAnds" upperBound="-1"
+          eType="#//processpackage/EMPInAnd" containment="true" eOpposite="#//processpackage/EMPInAnd/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="normalActivitys" upperBound="-1"
+          eType="#//processpackage/EMPNormalActivity" containment="true" eOpposite="#//processpackage/EMPNormalActivity/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="compActivitys" upperBound="-1"
+          eType="#//processpackage/EMPCompActivity" containment="true" eOpposite="#//processpackage/EMPCompActivity/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outOrs" upperBound="-1"
+          eType="#//processpackage/EMPOutOr" containment="true" eOpposite="#//processpackage/EMPOutOr/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assFlows" upperBound="-1"
+          eType="#//processpackage/EMPAssFlow" containment="true" eOpposite="#//processpackage/EMPAssFlow/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="refFlows" upperBound="-1"
+          eType="#//processpackage/EMPRefFlow" containment="true" eOpposite="#//processpackage/EMPRefFlow/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="others" upperBound="-1"
+          eType="#//processpackage/EMPOther" containment="true" eOpposite="#//processpackage/EMPOther/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="artifacts" upperBound="-1"
+          eType="#//processpackage/EMPArtifact" containment="true" eOpposite="#//processpackage/EMPArtifact/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="documents" upperBound="-1"
+          eType="#//processpackage/EMPDocument" containment="true" eOpposite="#//processpackage/EMPDocument/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="autoActivitys" upperBound="-1"
+          eType="#//processpackage/EMPAutoActivity" containment="true" eOpposite="#//processpackage/EMPAutoActivity/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messages" upperBound="-1"
+          eType="#//processpackage/EMPMessage" containment="true" eOpposite="#//processpackage/EMPMessage/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="manualBatchActivitys"
+          upperBound="-1" eType="#//processpackage/EMPManualBatchActivity" containment="true"
+          eOpposite="#//processpackage/EMPManualBatchActivity/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="autoBatchActivitys" upperBound="-1"
+          eType="#//processpackage/EMPAutoBatchActivity" containment="true" eOpposite="#//processpackage/EMPAutoBatchActivity/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="machineTypes" upperBound="-1"
+          eType="#//resourcepackage/EMRMachineType" containment="true" eOpposite="#//resourcepackage/EMRMachineType/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="roles" upperBound="-1"
+          eType="#//resourcepackage/EMRRole" containment="true" eOpposite="#//resourcepackage/EMRRole/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="locationTypes" upperBound="-1"
+          eType="#//resourcepackage/EMRLocationType" containment="true" eOpposite="#//resourcepackage/EMRLocationType/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="toolTypes" upperBound="-1"
+          eType="#//resourcepackage/EMRToolType" containment="true" eOpposite="#//resourcepackage/EMRToolType/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceGroupTypes" upperBound="-1"
+          eType="#//organizationpackage/EMOResourceGroupType" containment="true" eOpposite="#//organizationpackage/EMOResourceGroupType/empDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="mileStones" upperBound="-1"
+          eType="#//processpackage/EMPMileStone" containment="true" eOpposite="#//processpackage/EMPMileStone/empDiagram"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMPMileStone" eSuperTypes="#//processpackage/EMPObject">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="process" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataFlows" upperBound="-1"
+          eType="#//processpackage/EMPDataFlow" eOpposite="#//processpackage/EMPDataFlow/mileStone"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" transient="true" eOpposite="#//processpackage/EMPDiagram/mileStones"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="utilpackage" nsURI="http:///vpml/utilpackage.ecore" nsPrefix="vpml.utilpackage">
+    <eClassifiers xsi:type="ecore:EClass" name="DSDistribution">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="分布的参数，三个参数&#xD;&#xA;分布类型、参数1、参数2"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//utilpackage/EnumDistribution"
+          defaultValueLiteral="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="分布类型，缺省值为1，表示常量分布"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="dArgument1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+          defaultValueLiteral="10"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="dArgument2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+          defaultValueLiteral="0"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="EnumTimeUnit">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="时间单位&#xD;&#xA;public final static int pvSECOND = 0;&#xD;&#xA;&#x9;public final static int pvMINUTE = 1;&#xD;&#xA;&#x9;public final static int pvHOUR = 2;&#xD;&#xA;&#x9;public final static int pvDAY = 3;&#xD;&#xA;&#x9;public final static int pvWEEK = 4;&#xD;&#xA;&#x9;public final static int pvMONTH = 5;&#xD;&#xA;&#x9;public final static int pvQUARTER = 6;&#xD;&#xA;&#x9;public final static int pvYEAR = 7;&#xD;&#xA;&#x9;public final static int pvMILLISEC = 8;"/>
+      </eAnnotations>
+      <eLiterals name="SECOND"/>
+      <eLiterals name="MINUTE" value="1"/>
+      <eLiterals name="HOUR" value="2"/>
+      <eLiterals name="DAY" value="3"/>
+      <eLiterals name="WEEK" value="4"/>
+      <eLiterals name="MONTH" value="5"/>
+      <eLiterals name="QUARTER" value="6"/>
+      <eLiterals name="YEAR" value="7"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="EnumDistribution">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="分布概率类型&#xD;&#xA;public final static int DEFAULT = 0;&#xD;&#xA;public final static int CONSTANT = 1;&#xD;&#xA;public final static int UNIFORM = 2;&#xD;&#xA;public final static int NORMAL = 3;&#xD;&#xA;public final static int POISSION = 4;&#xD;&#xA;public final static int EXPONENTIAL = 5;&#xD;&#xA;public final static int GAMMA = 6;&#xD;&#xA;&#xD;&#xA;public final static String[] FunctionName ={&quot;缺省分布&quot;,&quot;常量分布&quot;,&quot;均匀分布&quot;,&quot;正态分布&quot;,&quot;泊松分布&quot;,&quot;指数分布&quot;,&quot;Gamma分布&quot;};&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+      <eLiterals name="DEFAULT"/>
+      <eLiterals name="CONSTANT" value="1"/>
+      <eLiterals name="UNIFORM" value="2"/>
+      <eLiterals name="NORMAL" value="3"/>
+      <eLiterals name="POISSION" value="4"/>
+      <eLiterals name="EXPONENTIAL" value="5"/>
+      <eLiterals name="GAMMA" value="6"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Sex">
+      <eLiterals name="man"/>
+      <eLiterals name="woman" value="1"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EDataType" name="JavaList" instanceClassName="java.util.List"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="JavaDate" instanceClassName="java.util.Date"/>
+    <eClassifiers xsi:type="ecore:EEnum" name="EnumIOType">
+      <eLiterals name="NON_SOURCE"/>
+      <eLiterals name="SINGLE_SOURCE" value="1"/>
+      <eLiterals name="SEQUENCE_SOURCE" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="EnumBatchType">
+      <eLiterals name="AMOUNT_ONLY"/>
+      <eLiterals name="TIME_ONLY" value="1"/>
+      <eLiterals name="TIME_OR_AMOUNT" value="2"/>
+      <eLiterals name="TIME_AND_AMOUNT" value="3"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="infopackage" nsURI="http:///vpml/infopackage.ecore" nsPrefix="vpml.infopackage">
+    <eClassifiers xsi:type="ecore:EClass" name="EMILeafProduct" eSuperTypes="#//infopackage/EMIProduct">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="productID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="产品的唯一标识"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="attachment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="记录附件名（句柄）"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="iotype" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="输入产品的类型，包括非源类型，单一类型和连续类型"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="interval" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="时间间隔"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="单位，为小时，分，秒等"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="initList" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="初始化队列"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="cost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="原材料费用"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="durationTime" eType="#//utilpackage/DSDistribution"
+          containment="true" resolveProxies="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="database" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="dbTable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="dbTableItem" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIDocument" eSuperTypes="#//infopackage/EMILeafProduct">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="documentDiagram" eType="#//infopackage/EMIDiagram"
+          transient="true" eOpposite="#//infopackage/EMIDiagram/document"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIArtifact" eSuperTypes="#//infopackage/EMILeafProduct">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="artifactDiagram" eType="#//infopackage/EMIDiagram"
+          transient="true" eOpposite="#//infopackage/EMIDiagram/artifact"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIOther" eSuperTypes="#//infopackage/EMILeafProduct">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="otherDiagram" eType="#//infopackage/EMIDiagram"
+          transient="true" eOpposite="#//infopackage/EMIDiagram/other"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIProductPackage" eSuperTypes="#//infopackage/EMIProduct">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="productList" eType="#//utilpackage/JavaList"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subPackages" upperBound="-1"
+          eType="#//infopackage/EMIProductPackage" containment="true" eOpposite="#//infopackage/EMIProductPackage/topPackage"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="topPackage" eType="#//infopackage/EMIProductPackage"
+          transient="true" eOpposite="#//infopackage/EMIProductPackage/subPackages"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="productPackageDiagram"
+          eType="#//infopackage/EMIDiagram" transient="true" eOpposite="#//infopackage/EMIDiagram/productPackage"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIObject" eSuperTypes="#//EMObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMIObject是过程模型中所有对象的基类，它继承自企业模型基本对象。&#xD;&#xA;每一个EMIObject都记录了其父节点，即其所在的组合活动"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMILogicalConnector" eSuperTypes="#//infopackage/EMINode">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIComInfo" eSuperTypes="#//infopackage/EMINode">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="comInfoDiagram" eType="#//infopackage/EMIDiagram"
+          transient="true" eOpposite="#//infopackage/EMIDiagram/comInfo"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIProduct" eSuperTypes="#//infopackage/EMINode">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="procedure" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="与产品相关的过程步骤的文字描述"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIFlow" eSuperTypes="#//infopackage/EMIObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMIFlow（流连接）不仅用在建立VPML对象间的联系，而且还用在活动间传送产品信息，帮助协调活动的调度。&#xD;&#xA;共有四种流连接：数据流连接（EMIDataFlow），时钟连接（EMIClock）、引用连接（EMIRefFlow）和关联连接（EMIAssFlow）。&#xD;&#xA;"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+          defaultValueLiteral="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="用来表示连接方向。&#xD;&#xA;1：PointA-->PointB&#xD;&#xA;2：PointB-->PointA"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+          defaultValueLiteral="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="数量。具体解释见具体连接。"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceNode" eType="#//infopackage/EMINode"
+          eOpposite="#//infopackage/EMINode/targetFlow"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetNode" eType="#//infopackage/EMINode"
+          eOpposite="#//infopackage/EMINode/sourceFlow"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMINode" eSuperTypes="#//infopackage/EMIObject">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetFlow" upperBound="-1"
+          eType="#//infopackage/EMIFlow" eOpposite="#//infopackage/EMIFlow/sourceNode"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceFlow" upperBound="-1"
+          eType="#//infopackage/EMIFlow" eOpposite="#//infopackage/EMIFlow/targetNode"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIRefFlow" eSuperTypes="#//infopackage/EMIFlow">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="refFlowDiagram" eType="#//infopackage/EMIDiagram"
+          transient="true" eOpposite="#//infopackage/EMIDiagram/refFlow"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIDataFlow" eSuperTypes="#//infopackage/EMIFlow">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataFlowDiagram" eType="#//infopackage/EMIDiagram"
+          transient="true" eOpposite="#//infopackage/EMIDiagram/dataFlow"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIInConnector" eSuperTypes="#//infopackage/EMILogicalConnector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMIInConnector（输入逻辑连接符）是输入与、输入或的基类。&#xD;&#xA;产品通过EMIProToIn和输入逻辑连接符相连；&#xD;&#xA;输入与、输入或之间通过EMIInToIn相连；&#xD;&#xA;输入逻辑连接符可以通过EMIInToAct和叶活动相连"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIOutConnector" eSuperTypes="#//infopackage/EMILogicalConnector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMIOutConnector（输出逻辑连接符）是输出与、输出或的基类。&#xD;&#xA;活动通过EMIActToOut和输出逻辑连接符相连；&#xD;&#xA;输出与、输出或之间通过EMIOutToOut相连；&#xD;&#xA;输出逻辑连接符可以通过EMIOutToPro和产品相连"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIStateConnector" eSuperTypes="#//infopackage/EMILogicalConnector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="stateConnectorDiagram"
+          eType="#//infopackage/EMIDiagram" transient="true" eOpposite="#//infopackage/EMIDiagram/stateConnector"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIInOr" eSuperTypes="#//infopackage/EMIInConnector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMIInOr（输入或连接符）允许从多个输入产品到单一的活动有多个数据流输入。当资源可用并且所有其它的的连接（例如，时钟连接）得到满足时，若连接到&quot;输入或&quot;的每个输入产品中任何一个到达时，活动将被激活。"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inorDiagram" eType="#//infopackage/EMIDiagram"
+          transient="true" eOpposite="#//infopackage/EMIDiagram/inor"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIInAnd" eSuperTypes="#//infopackage/EMIInConnector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMIInAnd（输入与连接符）允许来自多个输入产品的数据流连接。当资源可用并且所有其它的连接（例如，时钟连接）得到满足时，若连接到&quot;输入与&quot;的每个输入产品中都到达时，活动将被激活。"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inandDiagram" eType="#//infopackage/EMIDiagram"
+          transient="true" eOpposite="#//infopackage/EMIDiagram/inand"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIOutAnd" eSuperTypes="#//infopackage/EMIOutConnector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMIOutAnd（输出与）表示将活动产生的一个输出数据作为输入，同时输出多个数据流。"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outandDiagram" eType="#//infopackage/EMIDiagram"
+          transient="true" eOpposite="#//infopackage/EMIDiagram/outand"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIOutOr" eSuperTypes="#//infopackage/EMIOutConnector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EMIOutOr（输出或）表示将活动产生的一个输出数据作为输入，仅向一个输出数据流输出产品。&#xD;&#xA;一个输出或所连接的所有输出连接流上的概率值（iProbability）应为1000。"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outorDiagram" eType="#//infopackage/EMIDiagram"
+          transient="true" eOpposite="#//infopackage/EMIDiagram/outor"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIDiagram" eSuperTypes="#//EMDiagram">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" eOpposite="#//processpackage/EMPDiagram/emiDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="artifact" upperBound="-1"
+          eType="#//infopackage/EMIArtifact" containment="true" eOpposite="#//infopackage/EMIArtifact/artifactDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inand" upperBound="-1"
+          eType="#//infopackage/EMIInAnd" containment="true" eOpposite="#//infopackage/EMIInAnd/inandDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inor" upperBound="-1"
+          eType="#//infopackage/EMIInOr" containment="true" eOpposite="#//infopackage/EMIInOr/inorDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="stateConnector" upperBound="-1"
+          eType="#//infopackage/EMIStateConnector" containment="true" eOpposite="#//infopackage/EMIStateConnector/stateConnectorDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="other" upperBound="-1"
+          eType="#//infopackage/EMIOther" containment="true" eOpposite="#//infopackage/EMIOther/otherDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="productPackage" upperBound="-1"
+          eType="#//infopackage/EMIProductPackage" containment="true" eOpposite="#//infopackage/EMIProductPackage/productPackageDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outand" upperBound="-1"
+          eType="#//infopackage/EMIOutAnd" containment="true" eOpposite="#//infopackage/EMIOutAnd/outandDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outor" upperBound="-1"
+          eType="#//infopackage/EMIOutOr" containment="true" eOpposite="#//infopackage/EMIOutOr/outorDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="refFlow" upperBound="-1"
+          eType="#//infopackage/EMIRefFlow" containment="true" eOpposite="#//infopackage/EMIRefFlow/refFlowDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="document" upperBound="-1"
+          eType="#//infopackage/EMIDocument" containment="true" eOpposite="#//infopackage/EMIDocument/documentDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataFlow" upperBound="-1"
+          eType="#//infopackage/EMIDataFlow" containment="true" eOpposite="#//infopackage/EMIDataFlow/dataFlowDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="comInfo" upperBound="-1"
+          eType="#//infopackage/EMIComInfo" containment="true" eOpposite="#//infopackage/EMIComInfo/comInfoDiagram"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="collaborationpackage" nsURI="http:///vpml/collaborationpackage.ecore"
+      nsPrefix="vpml.collaborationpackage">
+    <eClassifiers xsi:type="ecore:EClass" name="EMCLogicalConnector" eSuperTypes="#//EMObject"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EMCAnd" eSuperTypes="#//collaborationpackage/EMCLogicalConnector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colAndDiagram" eType="#//collaborationpackage/EMCDiagram"
+          transient="true" eOpposite="#//collaborationpackage/EMCDiagram/colAnd"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMCOR" eSuperTypes="#//collaborationpackage/EMCLogicalConnector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colORDiagram" eType="#//collaborationpackage/EMCDiagram"
+          transient="true" eOpposite="#//collaborationpackage/EMCDiagram/colOR"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMCCollaborationGroup" eSuperTypes="#//EMObject">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colColGroupDiagram" eType="#//collaborationpackage/EMCDiagram"
+          transient="true" eOpposite="#//collaborationpackage/EMCDiagram/colColGroup"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMCDiagram" eSuperTypes="#//EMDiagram">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="empDiagram" lowerBound="1"
+          eType="#//processpackage/EMPDiagram" eOpposite="#//processpackage/EMPDiagram/emcDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="associatePrModel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colAnd" upperBound="-1"
+          eType="#//collaborationpackage/EMCAnd" containment="true" eOpposite="#//collaborationpackage/EMCAnd/colAndDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colOR" upperBound="-1"
+          eType="#//collaborationpackage/EMCOR" containment="true" eOpposite="#//collaborationpackage/EMCOR/colORDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colRole" upperBound="-1"
+          eType="#//resourcepackage/EMRRole" containment="true" eOpposite="#//resourcepackage/EMRRole/colRoleDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colLocation" upperBound="-1"
+          eType="#//resourcepackage/EMRLocationType" containment="true" eOpposite="#//resourcepackage/EMRLocationType/colLocationDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colMachine" upperBound="-1"
+          eType="#//resourcepackage/EMRMachineType" containment="true" eOpposite="#//resourcepackage/EMRMachineType/colMachineDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colEMOGroup" upperBound="-1"
+          eType="#//organizationpackage/EMOResourceGroupType" containment="true" eOpposite="#//organizationpackage/EMOResourceGroupType/colEMOGroupDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colColGroup" upperBound="-1"
+          eType="#//collaborationpackage/EMCCollaborationGroup" containment="true"
+          eOpposite="#//collaborationpackage/EMCCollaborationGroup/colColGroupDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colColRelation" upperBound="-1"
+          eType="#//collaborationpackage/EMCCollaborationRelation" containment="true"
+          eOpposite="#//collaborationpackage/EMCCollaborationRelation/colColRelationDiagram"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colSeqRelation" upperBound="-1"
+          eType="#//collaborationpackage/EMCSequenceRelation" containment="true" eOpposite="#//collaborationpackage/EMCSequenceRelation/colSeqRelationDiagram"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMCRelation">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRelationSourceObj"
+          eType="#//EMObject" eOpposite="#//EMObject/sourceObjSourceRelation"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetRelationTargetObj"
+          eType="#//EMObject" eOpposite="#//EMObject/targetObjTargetRelation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMCCollaborationRelation" eSuperTypes="#//collaborationpackage/EMCRelation">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colColRelationDiagram"
+          eType="#//collaborationpackage/EMCDiagram" transient="true" eOpposite="#//collaborationpackage/EMCDiagram/colColRelation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMCSequenceRelation" eSuperTypes="#//collaborationpackage/EMCRelation">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colSeqRelationDiagram"
+          eType="#//collaborationpackage/EMCDiagram" transient="true" eOpposite="#//collaborationpackage/EMCDiagram/colSeqRelation"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

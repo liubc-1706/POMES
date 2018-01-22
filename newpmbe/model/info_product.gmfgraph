@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgraph:Canvas xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmfgraph="http://www.eclipse.org/gmf/2005/GraphicalDefinition" name="vpml">
+  <figures
+      name="Default">
+    <figures
+        xsi:type="gmfgraph:Rectangle"
+        referencingElements="EMIProductPackage EMIDocument EMIArtifact EMIOther EMIMessage"
+        name="BasicRectangle"
+        outline="false"
+        fill="false"/>
+    <figures
+        xsi:type="gmfgraph:Label"
+        referencingElements="EMObjectName"
+        name="NodeName"
+        text="&lt;..>"/>
+  </figures>
+  <nodes
+      name="EMIArtifact"
+      figure="BasicRectangle"/>
+  <nodes
+      name="EMIDocument"
+      figure="BasicRectangle"/>
+  <nodes
+      name="EMIMessage"
+      figure="BasicRectangle"/>
+  <nodes
+      name="EMIOther"
+      figure="BasicRectangle"/>
+  <nodes
+      name="EMIProductPackage"
+      figure="BasicRectangle"/>
+  <labels
+      name="EMObjectName"
+      figure="NodeName"/>
+</gmfgraph:Canvas>

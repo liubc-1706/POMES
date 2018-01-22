@@ -1,0 +1,7 @@
+# Debugging options for the newpmbe.organization.diagram plug-in
+
+# Turn on general debugging for the newpmbe.organization.diagram plug-in
+newpmbe.organization.diagram/debug=false
+
+# Turn on debugging of visualID processing
+newpmbe.organization.diagram/debug/visualID=true

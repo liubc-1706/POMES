@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CCPUmenu Plug-in
+Bundle-SymbolicName: newPmbe.CCPUmenu; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: newpmbe.ccpumenu.Activator
+Require-Bundle: wzy.diagram.ccpu,
+ org.eclipse.gmf.runtime.diagram.ui,
+ org.eclipse.gmf.runtime.common.ui.services.properties
+Eclipse-LazyStart: true

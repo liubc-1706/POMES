@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trace:TraceModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:trace="http://www.eclipse.org/gmf/2006/Trace">
+  <nodeTraces
+      visualID="2001"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIDocument') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIDiagram') and _containmentMF_.name = 'document')">
+    <nodeLabelTraces
+        visualID="5001"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2002"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIOther') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIDiagram') and _containmentMF_.name = 'other')">
+    <nodeLabelTraces
+        visualID="5002"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2003"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIMessage') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIDiagram') and _containmentMF_.name = 'message')">
+    <nodeLabelTraces
+        visualID="5003"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2004"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIProductPackage') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIDiagram') and _containmentMF_.name = 'productPackage')">
+    <nodeLabelTraces
+        visualID="5004"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2005"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIOutOr') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIDiagram') and _containmentMF_.name = 'outor')">
+    <nodeLabelTraces
+        visualID="5005"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2006"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIInOr') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIDiagram') and _containmentMF_.name = 'inor')">
+    <nodeLabelTraces
+        visualID="5006"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2007"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIOutAnd') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIDiagram') and _containmentMF_.name = 'outand')">
+    <nodeLabelTraces
+        visualID="5007"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2008"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIInAnd') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIDiagram') and _containmentMF_.name = 'inand')">
+    <nodeLabelTraces
+        visualID="5008"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2009"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIArtifact') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIDiagram') and _containmentMF_.name = 'artifact')">
+    <nodeLabelTraces
+        visualID="5009"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2010"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIStateConnector') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIDiagram') and _containmentMF_.name = 'stateConnector')">
+    <nodeLabelTraces
+        visualID="5010"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2011"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIComInfo') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIDiagram') and _containmentMF_.name = 'comInfo')">
+    <nodeLabelTraces
+        visualID="5011"
+        queryText="true"/>
+  </nodeTraces>
+  <linkTraces
+      visualID="4001"
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIDataFlow')">
+    <linkLabelTraces
+        visualID="6001"
+        queryText="true"/>
+  </linkTraces>
+  <linkTraces
+      visualID="4002"
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http:///vpml/infopackage.ecore' and _eClass_.name = 'EMIRefFlow')">
+    <linkLabelTraces
+        visualID="6002"
+        queryText="true"/>
+  </linkTraces>
+</trace:TraceModel>

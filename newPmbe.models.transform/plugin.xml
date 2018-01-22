@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="模型转换"
+            visible="true"
+            id="newpmbe.modelTransfer.actionSet">
+         <menu
+               id="modelTransferMenu"
+               label="模型转换">
+            <groupMarker
+                  name="modelTransferGroup">
+            </groupMarker>
+         </menu>
+         <!--don't need this
+         <action
+               label="&amp;转换存储格式（IPRO-PMBE)"
+               icon="icons/sample.gif"
+               class="newpmbe.models.transform.actions.IproToPMBEAction"
+               menubarPath="modelTransferMenu/modelTransferGroup"
+               id="newpmbe.models.transform.actions.IproToPMBEAction">
+         </action>
+         -->
+         <action
+               class="newpmbe.models.transform.actions.UpdateAction"
+               icon="icons/web.gif"
+               id="newpmbe.web.actions.UpdateAction"
+               label="PMBE模型升级"
+               menubarPath="modelTransferMenu/modelTransferGroup"
+               >
+         </action>
+         <action
+               class="newpmbe.models.transform.actions.ToICEAction"
+               icon="icons/web.gif"
+               id="newpmbe.web.actions.ToICEAction"
+               label="转换为ICE模型"
+               menubarPath="modelTransferMenu/modelTransferGroup"
+               >
+         </action>
+      </actionSet>
+      
+      
+   </extension>
+
+</plugin>

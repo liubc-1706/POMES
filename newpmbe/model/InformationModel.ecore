@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="vpml"
+    nsURI="http:///vpml.ecore" nsPrefix="vpml">
+  <eClassifiers xsi:type="ecore:EClass" name="EMObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="EMObject是新版VPML元类的继承关系树中的基类，所有元类都是EMObject的后代。EMObject定义了作为建模元素应该有的一般属性，如ID、名称、编码、描述。"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="OID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="simOID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"
+        defaultValueLiteral="0"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EMModel">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="EMModel标识了一个企业模型，包括活动视图、数据视图、资源视图、组织视图。在模型元素的组合关系树中EMModel是根节点。以EMModel作为起点可以遍历模型的所有元数据。"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eSubpackages name="informationpackage" nsURI="http:///vpml/informationpackage.ecore"
+      nsPrefix="vpml.informationpackage">
+    <eClassifiers xsi:type="ecore:EClass" name="EMIComplexItem" eSuperTypes="#//EMObject"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIForm" eSuperTypes="#//informationpackage/EMIComplexItem">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+          eType="#//informationpackage/EMIAttribute" containment="true" eOpposite="#//informationpackage/EMIAttribute/form"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIEnum" eSuperTypes="#//informationpackage/EMIComplexItem">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="literals" lowerBound="1"
+          upperBound="-1" eType="#//informationpackage/EMIEnumLiteral" containment="true"
+          eOpposite="#//informationpackage/EMIEnumLiteral/enum"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIEnumLiteral" eSuperTypes="#//EMObject">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="literal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="enum" lowerBound="1"
+          eType="#//informationpackage/EMIEnum" transient="true" eOpposite="#//informationpackage/EMIEnum/literals"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMISimpleAttribute" eSuperTypes="#//informationpackage/EMIAttribute">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//informationpackage/EMISimpleType"
+          defaultValueLiteral=""/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIList" eSuperTypes="#//informationpackage/EMIComplexItem">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+          eType="#//informationpackage/EMIAttribute" containment="true" eOpposite="#//informationpackage/EMIAttribute/list"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIStatAttribute" eSuperTypes="#//informationpackage/EMIAttribute">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="expressions" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIComplexAttribute" eSuperTypes="#//informationpackage/EMIAttribute">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="complexType" lowerBound="1"
+          eType="#//informationpackage/EMIComplexItem"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EMIAttribute" eSuperTypes="#//EMObject">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximun" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"
+          defaultValueLiteral="1"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="minimum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"
+          defaultValueLiteral="1"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="form" eType="#//informationpackage/EMIForm"
+          transient="true" eOpposite="#//informationpackage/EMIForm/attributes"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="list" eType="#//informationpackage/EMIList"
+          transient="true" eOpposite="#//informationpackage/EMIList/attributes"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="EMISimpleType">
+      <eLiterals name="String" literal="字符串"/>
+      <eLiterals name="Integer" value="1" literal="整数"/>
+      <eLiterals name="Double" value="2" literal="小数"/>
+      <eLiterals name="Boolean" value="3" literal="布尔值"/>
+      <eLiterals name="Date" value="4" literal="日期"/>
+      <eLiterals name="DateTime" value="5" literal="日期时间"/>
+      <eLiterals name="Time" value="6" literal="时间"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

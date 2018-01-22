@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Print Plug-in
+Bundle-SymbolicName: newPmbe.print;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: newpmbe.print.Activator
+Bundle-Vendor: lsz
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.gmf.runtime.diagram.ui.properties,
+ org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide,
+ newpmbe,
+ newpmbe.process.diagram,
+ org.eclipse.ui.ide,
+ newpmbe.resource.diagram,
+ newpmbe.organization.diagram,
+ newpmbe.product.diagram,
+ newPmbe.validator
+Eclipse-LazyStart: true

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 11.0, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg 
+	 xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;" i:viewOrigin="31.7676 674.0098" i:rulerOrigin="0 0" i:pageBounds="0 841.8896 595.4453 0"
+	 xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="484.465" height="424.757" viewBox="0 0 484.465 424.757" overflow="visible" enable-background="new 0 0 484.465 424.757"
+	 xml:space="preserve">
+	<metadata>
+		<variableSets  xmlns="http://ns.adobe.com/Variables/1.0/">
+			<variableSet  varSetName="binding1" locked="none">
+				<variables></variables>
+				<v:sampleDataSets  xmlns="http://ns.adobe.com/GenericCustomNamespace/1.0/" xmlns:v="http://ns.adobe.com/Variables/1.0/">
+					</v:sampleDataSets>
+			</variableSet>
+		</variableSets>
+		<sfw  xmlns="&ns_sfw;">
+			<slices></slices>
+			<sliceSourceBounds  y="249.253" x="31.768" width="484.465" height="424.757" bottomLeftOrigin="true"></sliceSourceBounds>
+		</sfw>
+	</metadata>
+	<switch>
+		<foreignObject requiredExtensions="&ns_ai;" x="0" y="0" width="1" height="1">
+			<i:pgfRef  xlink:href="#adobe_illustrator_pgf">
+			</i:pgfRef>
+		</foreignObject>
+		<g i:extraneous="self">
+			<g id="Layer_1" i:layer="yes" i:dimmedPercent="50" i:rgbTrio="#4F008000FFFF">
+				
+					<ellipse i:knockout="Off" stroke="#000000" stroke-width="0.24" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" cx="120.732" cy="53.12" rx="88.5" ry="53"/> 
+				
+					<ellipse i:knockout="Off" stroke="#000000" stroke-width="0.24" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" cx="355.066" cy="53.865" rx="88.5" ry="53"/> 
+				<ellipse i:knockout="Off" fill="#FFFFFF" stroke="#008000" stroke-width="6" cx="235.232" cy="186.12" rx="183" ry="180"/> 
+				<polygon stroke="#000000" stroke-width="0.24" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" points="
+					141.85,424.637 0.12,424.637 141.85,339.598 "/>
+				<polygon stroke="#000000" stroke-width="0.24" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" points="
+					331.275,423.637 484.345,423.637 331.275,338.598 "/>
+				
+					<line fill="none" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" x1="234.898" y1="84.646" x2="234.898" y2="226.375"/>
+				<title>工作表.3</title>
+				<g id="group8-1" i:knockout="Off">
+					
+						<line fill="none" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" x1="217.891" y1="186.692" x2="376.63" y2="186.692"/>
+					<title>工作表.7</title>
+				</g>
+			</g>
+		</g>
+	</switch>
+	</svg>

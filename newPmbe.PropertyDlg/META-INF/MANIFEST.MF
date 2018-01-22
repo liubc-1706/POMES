@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: PropertyDlg Plug-in
+Bundle-SymbolicName: newPmbe.PropertyDlg; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: newpmbe.propertydlg.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.ui.ide,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.gmf.runtime.common.ui,
+ org.eclipse.emf.ecore,
+ org.eclipse.gmf.runtime.diagram.ui,
+ org.eclipse.gmf.runtime.emf.type.ui,
+ newpmbe,
+ org.eclipse.gmf.runtime.emf.ui.properties,
+ newpmbe.process.diagram,
+ org.eclipse.gmf.runtime.diagram.ui.properties,
+ org.eclipse.gmf.runtime.diagram.ui.resources.editor
+Eclipse-LazyStart: true
+Export-Package: newpmbe.DlgPackage,
+ newpmbe.propertydlg.popup.actions

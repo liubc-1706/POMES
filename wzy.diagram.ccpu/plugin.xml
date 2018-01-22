@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+<extension	point="org.eclipse.ui.popupMenus">
+  <objectContribution
+        adaptable="false"
+        id="wzy.diagram.edit.parts.DiagramEditPart"
+        objectClass="newpmbe.organization.diagram.edit.parts.EMODiagramEditPart">
+     <menu
+           id="BMAChange"
+           label="&amp;编辑"
+           path="additions">
+        <separator name="group1"/>
+     </menu>
+     <action
+           class="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+           enablesFor="1"
+           id="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+           label="&amp;粘贴"
+           menubarPath="BMAChange/group1"/>
+  </objectContribution>
+</extension>
+<extension	point="org.eclipse.ui.popupMenus">
+  <objectContribution
+        adaptable="false"
+        id="wzy.diagram.edit.parts.DiagramEditPart"
+        objectClass="newpmbe.process.diagram.edit.parts.EMPDiagramEditPart">
+     <menu
+           id="BMAChange"
+           label="&amp;编辑"
+           path="additions">
+        <separator name="group1"/>
+     </menu>
+     <action
+           class="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+           enablesFor="1"
+           id="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+           label="&amp;粘贴"
+           menubarPath="BMAChange/group1"/>
+  </objectContribution>
+</extension>
+<extension	point="org.eclipse.ui.popupMenus">
+  <objectContribution
+        adaptable="false"
+        id="wzy.diagram.edit.parts.DiagramEditPart"
+        objectClass="newpmbe.product.diagram.edit.parts.EMPDiagramEditPart">
+     <menu
+           id="BMAChange"
+           label="&amp;编辑"
+           path="additions">
+        <separator name="group1"/>
+     </menu>
+     <action
+           class="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+           enablesFor="1"
+           id="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+           label="&amp;粘贴"
+           menubarPath="BMAChange/group1"/>
+  </objectContribution>
+</extension>
+<extension	point="org.eclipse.ui.popupMenus">
+  <objectContribution
+        adaptable="false"
+        id="wzy.diagram.edit.parts.DiagramEditPart"
+        objectClass="newpmbe.resource.diagram.edit.parts.EMRDiagramEditPart">
+     <menu
+           id="BMAChange"
+           label="&amp;编辑"
+           path="additions">
+        <separator name="group1"/>
+     </menu>
+     <action
+           class="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+           enablesFor="1"
+           id="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+           label="&amp;粘贴"
+           menubarPath="BMAChange/group1"/>
+  </objectContribution>
+</extension>
+
+<extension	point="org.eclipse.ui.popupMenus">
+  <objectContribution
+        adaptable="false"
+        id="wzy.diagram.edit.parts.EditPart"
+        objectClass="newpmbe.process.diagram.edit.parts.Editable">
+     <menu
+           id="Change"
+           label="&amp;编辑"
+           path="additions">
+        <separator name="group1"/>
+     </menu>
+     <action
+           class="wzy.diagram.ccpu.popup.actions.CopyNewAction"
+           enablesFor="+"
+           id="wzy.diagram.ccpu.popup.actions.CopyNewAction"
+           label="&amp;复制"
+           menubarPath="Change/group1"/>    
+  </objectContribution>
+</extension>
+
+
+<extension	point="org.eclipse.ui.popupMenus">
+  <objectContribution
+        adaptable="false"
+        id="wzy.diagram.edit.parts.EditPart"
+        objectClass="newpmbe.product.diagram.edit.parts.EditableProduct">
+     <menu
+           id="Change"
+           label="&amp;编辑"
+           path="additions">
+        <separator name="group1"/>
+     </menu>
+     <action
+           class="wzy.diagram.ccpu.popup.actions.CopyNewAction"
+           enablesFor="+"
+           id="wzy.diagram.ccpu.popup.actions.CopyNewAction"
+           label="&amp;复制"
+           menubarPath="Change/group1"/>
+     
+  </objectContribution>
+</extension>
+
+
+<extension	point="org.eclipse.ui.popupMenus">
+  <objectContribution
+        adaptable="false"
+        id="wzy.diagram.edit.parts.EditPart"
+        objectClass="newpmbe.organization.diagram.edit.parts.EditableOrg">
+     <menu
+           id="Change"
+           label="&amp;编辑"
+           path="additions">
+        <separator name="group1"/>
+     </menu>
+     <action
+           class="wzy.diagram.ccpu.popup.actions.CopyNewAction"
+           enablesFor="+"
+           id="wzy.diagram.ccpu.popup.actions.CopyNewAction"
+           label="&amp;复制"
+           menubarPath="Change/group1"/>
+     
+  </objectContribution>
+</extension>
+
+
+<extension	point="org.eclipse.ui.popupMenus">
+  <objectContribution
+        adaptable="false"
+        id="wzy.diagram.edit.parts.EditPart"
+        objectClass="newpmbe.resource.diagram.edit.parts.EditableRes">
+     <menu
+           id="Change"
+           label="&amp;编辑"
+           path="additions">
+        <separator name="group1"/>
+     </menu>
+     <action
+           class="wzy.diagram.ccpu.popup.actions.CopyNewAction"
+           enablesFor="+"
+           id="wzy.diagram.ccpu.popup.actions.CopyNewAction"
+           label="&amp;复制"
+           menubarPath="Change/group1"/>
+     
+  </objectContribution>
+</extension>
+
+
+
+<extension
+	     point="org.eclipse.ui.bindings">
+	     <key
+	        commandId="org.eclipse.ui.edit.text.delete.line"
+	        contextId="org.eclipse.ui.textEditorScope"
+			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+	        sequence="M1+D"/>
+</extension>
+<extension
+	point="org.eclipse.ui.commands">
+	<activeKeyConfiguration
+		keyConfigurationId="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+		value="wzy.diagram.ccpu.popup.actions.PasteNewAction"/>
+	<category
+		id="wzy.copypaste"
+		name="wzy.copypaste"/>
+	<command
+		category="wzy.copypaste"
+		id="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+		name="example.pastecommand"/>
+	<keyBinding
+		command="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+		configuration="org.eclipse.ui.defaultAcceleratorConfiguration"
+		keySequence="M1+Z"/>
+</extension>
+<extension
+	point="org.eclipse.ui.commands">
+	<activeKeyConfiguration
+		keyConfigurationId="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+		value="wzy.diagram.ccpu.popup.actions.PasteNewAction"/>
+	<category
+		id="wzy.copypaste"
+		name="wzy.copypaste"/>
+	<command
+		category="wzy.copypaste"
+		id="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+		name="example.pastecommand"/>
+	<keyBinding
+		command="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+		configuration="org.eclipse.ui.defaultAcceleratorConfiguration"
+		keySequence="M1+A"/>
+</extension>
+<extension
+	point="org.eclipse.ui.commands">
+	<activeKeyConfiguration
+		keyConfigurationId="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+		value="wzy.diagram.ccpu.popup.actions.PasteNewAction"/>
+	<category
+		id="wzy.copypaste"
+		name="wzy.copypaste"/>
+	<command
+		category="wzy.copypaste"
+		id="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+		name="example.pastecommand"/>
+	<keyBinding
+		command="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+		configuration="org.eclipse.ui.defaultAcceleratorConfiguration"
+		keySequence="M1+C"/>
+</extension>
+<extension
+	point="org.eclipse.ui.commands">
+	<activeKeyConfiguration
+		keyConfigurationId="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+		value="wzy.diagram.ccpu.popup.actions.PasteNewAction"/>
+	<category
+		id="wzy.copypaste"
+		name="wzy.copypaste"/>
+	<command
+		category="wzy.copypaste"
+		id="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+		name="example.pastecommand"/>
+	<keyBinding
+		command="wzy.diagram.ccpu.popup.actions.PasteNewAction"
+		configuration="org.eclipse.ui.defaultAcceleratorConfiguration"
+		keySequence="M1+V"/>
+</extension>
+</plugin>

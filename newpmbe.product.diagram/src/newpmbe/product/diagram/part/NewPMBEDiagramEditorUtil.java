@@ -1,0 +1,151 @@
+package newpmbe.product.diagram.part;
+
+import java.io.File;
+
+import org.eclipse.emf.common.ui.URIEditorInput;
+
+import org.eclipse.jface.dialogs.MessageDialog;
+
+import org.eclipse.swt.widgets.FileDialog;
+import org.eclipse.swt.widgets.Shell;
+
+import org.eclipse.ui.IEditorDescriptor;
+import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IWorkbench;
+import org.eclipse.ui.IWorkbenchPage;
+import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
+
+import java.io.IOException;
+import java.util.Collections;
+
+import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.core.commands.operations.OperationHistoryFactory;
+import org.eclipse.core.runtime.IAdaptable;
+import org.eclipse.core.runtime.IPath;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.SubProgressMonitor;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.gmf.runtime.common.core.command.CommandResult;
+import org.eclipse.gmf.runtime.diagram.core.services.ViewService;
+import org.eclipse.gmf.runtime.emf.commands.core.command.AbstractTransactionalCommand;
+import org.eclipse.gmf.runtime.emf.core.GMFEditingDomainFactory;
+import org.eclipse.gmf.runtime.notation.Diagram;
+import org.eclipse.ui.PartInitException;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
+import java.util.HashMap;
+import java.util.Map;
+
+import newpmbe.product.diagram.edit.parts.EMPDiagramEditPart;
+
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.ResourcesPlugin;
+
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.NullProgressMonitor;
+
+import org.eclipse.emf.ecore.EObject;
+
+import org.eclipse.emf.ecore.xmi.XMIResource;
+
+import org.eclipse.emf.edit.ui.util.EditUIUtil;
+
+import vpml.processpackage.EMPDiagram;
+import vpml.processpackage.ProcesspackageFactory;
+
+/**
+ * @generated
+ */
+public class NewPMBEDiagramEditorUtil {
+
+	/**
+	 * @generated
+	 */
+	public static boolean openDiagram(Resource diagram)
+			throws PartInitException {
+		return EditUIUtil.openEditor((EObject) diagram.getContents().get(0));
+	}
+
+	/**
+	 * @generated
+	 */
+	private static void setCharset(IPath path) {
+		IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(path);
+		try {
+			file.setCharset("UTF-8", new NullProgressMonitor()); //$NON-NLS-1$
+		} catch (CoreException e) {
+			NewPMBEDiagramEditorPlugin.getInstance().logError(
+					"Unable to set charset for file " + path, e); //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * <p>
+	 * This method should be called within a workspace modify operation since it creates resources.
+	 * </p>
+	 * @generated
+	 * @return the created resource, or <code>null</code> if the resource was not created
+	 */
+	public static final Resource createDiagram(IPath containerFullPath,
+			String fileNameParameter, IProgressMonitor progressMonitor) {
+		final String fileName = fileNameParameter;
+		TransactionalEditingDomain editingDomain = GMFEditingDomainFactory.INSTANCE
+				.createEditingDomain();
+		progressMonitor.beginTask("Creating diagram and model files", 3); //$NON-NLS-1$
+		IPath diagramPath = containerFullPath.append(fileName);
+		final Resource diagramResource = editingDomain.getResourceSet()
+				.createResource(
+						URI.createPlatformResourceURI(diagramPath.toString()));
+		AbstractTransactionalCommand command = new AbstractTransactionalCommand(
+				editingDomain,
+				"Creating diagram and model", Collections.EMPTY_LIST) { //$NON-NLS-1$
+			protected CommandResult doExecuteWithResult(
+					IProgressMonitor monitor, IAdaptable info)
+					throws ExecutionException {
+				EMPDiagram model = createInitialModel();
+				diagramResource.getContents().add(model);
+				Diagram diagram = ViewService.createDiagram(model,
+						EMPDiagramEditPart.MODEL_ID,
+						NewPMBEDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
+				if (diagram != null) {
+					diagramResource.getContents().add(diagram);
+					diagram.setName(fileName);
+					diagram.setElement(model);
+				}
+				try {
+					Map options = new HashMap();
+					options.put(XMIResource.OPTION_ENCODING, "UTF-8"); //$NON-NLS-1$
+					diagramResource.save(options);
+				} catch (IOException e) {
+
+					NewPMBEDiagramEditorPlugin.getInstance().logError(
+							"Unable to store model and diagram resources", e); //$NON-NLS-1$
+				}
+				return CommandResult.newOKCommandResult();
+			}
+		};
+
+		try {
+			OperationHistoryFactory.getOperationHistory().execute(command,
+					new SubProgressMonitor(progressMonitor, 1), null);
+		} catch (ExecutionException e) {
+			NewPMBEDiagramEditorPlugin.getInstance().logError(
+					"Unable to create model and diagram", e); //$NON-NLS-1$
+		}
+
+		setCharset(diagramPath);
+		return diagramResource;
+	}
+
+	/**
+	 * Create a new instance of domain element associated with canvas.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static EMPDiagram createInitialModel() {
+		return ProcesspackageFactory.eINSTANCE.createEMPDiagram();
+	}
+
+}

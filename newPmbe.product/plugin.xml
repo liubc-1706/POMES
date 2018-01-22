@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+  
+   <extension point="org.eclipse.ui.popupMenus">
+   	 <objectContribution
+            adaptable="false"
+            id="newPmbe.process.diagram.ui.objectContribution.EMPProductPackageEditPart1"
+            objectClass="newpmbe.process.diagram.edit.parts.EMPProductPackageEditPart">
+         <action
+               class="newpmbe.product.actions.OpenSubDiagramAction"
+               enablesFor="1"
+               id="newpmbe.product.actions.OpenSubDiagramAction1"
+               label="打开子图"
+               menubarPath="additions">
+         </action>
+      </objectContribution>                           
+  </extension>
+  
+  
+  <extension point="org.eclipse.ui.popupMenus">
+   	 <objectContribution
+            adaptable="false"
+            id="newPmbe.product.diagram.ui.objectContribution.EMPProductPackageEditPart1"
+            objectClass="newpmbe.product.diagram.edit.parts.EMPProductPackageEditPart">
+         <action
+               class="newpmbe.product.actions.OpenSubDiagramAction2"
+               enablesFor="1"
+               id="newpmbe.product.actions.OpenSubDiagramAction2"
+               label="打开子图"
+               menubarPath="additions">
+         </action>
+      </objectContribution>  
+                         
+  </extension>
+   
+   
+   
+   
+
+</plugin>

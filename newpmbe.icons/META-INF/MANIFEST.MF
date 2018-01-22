@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Icons Plug-in
+Bundle-SymbolicName: newpmbe.icons; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: newpmbe.icons.Activator
+Bundle-Vendor: Nigel
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Eclipse-LazyStart: true

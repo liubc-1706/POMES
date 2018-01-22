@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- 由 Microsoft Visio 11.0, SVG Export, v1.0 生成 EMPBatchActivity.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="8.26772in"
+		height="11.6929in" viewBox="0 0 595.276 841.89" xml:space="preserve" color-interpolation-filters="sRGB" class="st4">
+	<v:documentProperties v:langID="2052" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#ffffff;stroke:#ff0000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2}
+		.st2 {fill:#ffff00;stroke:#ffff00;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2}
+		.st3 {fill:#e8eef7;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st4 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<g id="group4-1" transform="translate(0,-595.276)" v:mID="4" v:groupContext="group">
+			<title>工作表.4</title>
+			<g id="shape1-2" v:mID="1" v:groupContext="shape">
+				<title>椭圆</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<path d="M0 721.42 A297.638 120.472 0 0 1 595.28 721.42 A297.638 120.472 0 1 1 0 721.42 Z" class="st1"/>
+			</g>
+			<g id="shape2-4" v:mID="2" v:groupContext="shape" transform="translate(354.331,-14.1732)">
+				<title>七角星形</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<path d="M40.96 765.55 L10.06 762.33 L20.44 787.63 L-1.46 806.48 L27.62 815.16 L30.81 841.89 L56.69 827.41 L82.57
+							 841.89 L85.77 815.16 L114.84 806.48 L92.95 787.63 L103.33 762.33 L72.83 765.55 L56.69 742.68 L40.96
+							 765.55 Z" class="st2"/>
+			</g>
+			<g id="shape3-6" v:mID="3" v:groupContext="shape" transform="translate(396.85,-42.5197)">
+				<title>圆形</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<path d="M0 827.72 A14.1732 14.1732 0 1 1 28.35 827.72 A14.1732 14.1732 0 0 1 0 827.72 Z" class="st3"/>
+			</g>
+		</g>
+	</g>
+</svg>

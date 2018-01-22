@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http:///vpml.ecore" 
+       class = "vpml.VpmlPackage"
+       genModel = "model/NewPMBE.genmodel" /> 
+  </extension>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http:///vpml/organizationpackage.ecore" 
+       class = "vpml.organizationpackage.OrganizationpackagePackage"
+       genModel = "model/NewPMBE.genmodel" /> 
+  </extension>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http:///vpml/resourcepackage.ecore" 
+       class = "vpml.resourcepackage.ResourcepackagePackage"
+       genModel = "model/NewPMBE.genmodel" /> 
+  </extension>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http:///vpml/processpackage.ecore" 
+       class = "vpml.processpackage.ProcesspackagePackage"
+       genModel = "model/NewPMBE.genmodel" /> 
+  </extension>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http:///vpml/utilpackage.ecore" 
+       class = "vpml.utilpackage.UtilpackagePackage"
+       genModel = "model/NewPMBE.genmodel" /> 
+  </extension>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http:///vpml/infopackage.ecore" 
+       class = "vpml.infopackage.InfopackagePackage"
+       genModel = "model/NewPMBE.genmodel" /> 
+  </extension>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http:///vpml/collaborationpackage.ecore" 
+       class = "vpml.collaborationpackage.CollaborationpackagePackage"
+       genModel = "model/NewPMBE.genmodel" /> 
+  </extension>
+
+</plugin>

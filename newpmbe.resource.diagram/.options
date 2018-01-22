@@ -1,0 +1,7 @@
+# Debugging options for the newpmbe.resource.diagram plug-in
+
+# Turn on general debugging for the newpmbe.resource.diagram plug-in
+newpmbe.resource.diagram/debug=false
+
+# Turn on debugging of visualID processing
+newpmbe.resource.diagram/debug/visualID=true

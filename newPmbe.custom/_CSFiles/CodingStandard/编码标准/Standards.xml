@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Liu Peng Design 2007-05-26 -->
+<!-- Liu Peng Modifid 2007-06-06 -->
+<!-- Liu Peng Modifid 2007-06-14 -->
+<Coding>
+	<Level>3</Level>
+	<Custom>
+		<Standard>
+			<Name>1</Name>
+			<Index>1</Index>
+			<Length>6</Length>
+		</Standard>
+		<Standard>
+			<Name>2</Name>
+			<Index>1</Index>
+			<Length>6</Length>
+		</Standard>
+		<Standard>
+			<Name>3</Name>
+			<Index>1</Index>
+			<Length>6</Length>
+		</Standard>
+	</Custom>
+
+	<Default>
+		<Standard>
+			<Name>1</Name>
+			<Index>1</Index>
+			<Length>6</Length>
+		</Standard>
+		<Standard>
+			<Name>2</Name>
+			<Index>1</Index>
+			<Length>6</Length>
+		</Standard>
+		<Standard>
+			<Name>3</Name>
+			<Index>1</Index>
+			<Length>6</Length>
+		</Standard>
+	</Default>
+</Coding>

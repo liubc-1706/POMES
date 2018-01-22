@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- 由 Microsoft Visio 11.0, SVG Export, v1.0 生成 EMORole.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="8.26772in"
+		height="11.6929in" viewBox="0 0 100 130" xml:space="preserve" color-interpolation-filters="sRGB" class="st3">
+	<v:documentProperties v:langID="2052" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#e8eef7;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.16}
+		.st2 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.16}
+		.st3 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="连接线" v:index="0"/>
+		<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(34.0157,-793.701)">
+			<title>圆形</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+			</v:userDefs>
+			<path d="M0 819.21 A22.6772 22.6772 0 0 1 45.35 819.21 A22.6772 22.6772 0 1 1 0 819.21 Z" class="st1"/>
+		</g>
+		<g id="shape2-3" v:mID="2" v:groupContext="shape" v:layerMember="0" transform="translate(28.3465,-765.354)">
+			<title>直线-曲线连接线</title>
+			<v:userDefs>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+			</v:userDefs>
+			<path d="M0 841.89 L56.69 841.89 L56.69 841.89" class="st2"/>
+		</g>
+		<g id="shape3-6" v:mID="3" v:groupContext="shape" v:layerMember="0"
+				transform="translate(-785.197,48.189) rotate(-90) scale(-1,1)">
+			<title>直线-曲线连接线.3</title>
+			<v:userDefs>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+			</v:userDefs>
+			<path d="M0 841.89 L56.69 841.89 L56.69 841.89" class="st2"/>
+		</g>
+		<g id="shape4-9" v:mID="4" v:groupContext="shape" v:layerMember="0"
+				transform="translate(-538.613,-490.424) rotate(-45) scale(-1,1)">
+			<title>直线-曲线连接线.4</title>
+			<v:userDefs>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+			</v:userDefs>
+			<path d="M0 841.89 L-0.8 841.89 L-1.53 841.89 L-2.19 841.89 L-2.78 841.89 L-3.31 841.89 L-3.76 841.89 L-4.14 841.89 L-4.45
+						 841.89 L-4.7 841.89 L-4.87 841.89 L-4.98 841.89 L-5.01 841.89 L-4.98 841.89 L-4.87 841.89 L-4.7 841.89 L-4.45
+						 841.89 L-4.14 841.89 L-3.76 841.89 L-3.31 841.89 L-2.78 841.89 L-2.19 841.89 L-1.53 841.89 L-0.8 841.89
+						 L-0 841.89 L0.87 841.89 L1.81 841.89 L2.82 841.89 L3.9 841.89 L5.05 841.89 L6.26 841.89 L7.55 841.89 L8.91
+						 841.89 L10.34 841.89 L11.83 841.89 L13.4 841.89 L15.03 841.89 L16.74 841.89 L18.51 841.89 L20.36 841.89
+						 L22.27 841.89 L24.25 841.89 L26.31 841.89 L28.43 841.89 L30.62 841.89 L32.88 841.89 L35.22 841.89 L37.62
+						 841.89 L40.09 841.89" class="st2"/>
+		</g>
+		<g id="shape5-12" v:mID="5" v:groupContext="shape" v:layerMember="0"
+				transform="translate(679.641,-464.269) rotate(47.7263)">
+			<title>直线-曲线连接线.5</title>
+			<v:userDefs>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+			</v:userDefs>
+			<path d="M0 841.89 L2.46 842.01 L4.86 842.11 L7.19 842.21 L9.46 842.3 L11.66 842.38 L13.8 842.45 L15.87 842.5 L17.88
+						 842.55 L19.83 842.59 L21.71 842.62 L23.52 842.64 L25.27 842.65 L26.96 842.65 L28.58 842.64 L30.13 842.62
+						 L31.63 842.59 L33.05 842.55 L34.42 842.5 L35.71 842.45 L36.95 842.38 L38.11 842.3 L39.22 842.21 L40.26 842.11
+						 L41.23 842.01 L42.14 841.89" class="st2"/>
+		</g>
+	</g>
+</svg>

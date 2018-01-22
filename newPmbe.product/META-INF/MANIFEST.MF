@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Product Plug-in
+Bundle-SymbolicName: newPmbe.product; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: newpmbe.product.Activator
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui.ide,
+ org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.gmf.runtime.emf.commands.core,
+ org.eclipse.gmf.runtime.emf.core,
+ org.eclipse.gmf.runtime.emf.ui.properties,
+ org.eclipse.gmf.runtime.diagram.ui.resources.editor,
+ org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide,
+ org.eclipse.jface.databinding,
+ org.eclipse.gmf.runtime.diagram.ui,
+ newpmbe.process.diagram,
+ newpmbe.product.diagram
+Eclipse-LazyStart: true
+Bundle-ClassPath: .,
+ lib\jdom.jar
+Export-Package: .,
+ newpmbe.product,
+ newpmbe.product.actions,
+ newpmbe.product.tableViewer,
+ org.jdom,
+ org.jdom.adapters,
+ org.jdom.filter,
+ org.jdom.input,
+ org.jdom.output,
+ org.jdom.transform,
+ org.jdom.xpath

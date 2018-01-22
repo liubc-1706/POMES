@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+	<extension id="NewInvokatronAction"
+   	   	name="Open Project Action"
+   	   	point="org.eclipse.ui.actionSets">
+   	 	<actionSet id="info.project.actionSet"
+   	 		label="工程操作集"
+   	 		visible="true">
+   	 	<action
+            class="vpml.informationpackage.actions.NewInfoModelAction"
+            icon="icons/SADComponent.gif"
+            id="vpml.informationpackage.actions.NewInfoModelAction1"
+            label="信息模型"
+            menubarPath="file/new.ext"
+            tooltip="新建信息模型">
+   	 	</action>
+   		</actionSet>
+   	</extension>
+	
+	<extension point="org.eclipse.ui.popupMenus">  
+   		<objectContribution
+            id="newPmbe.infomation.IProject"
+            objectClass="org.eclipse.core.resources.IProject"
+            nameFilter="*.info">
+          <action
+               class="vpml.informationpackage.actions.NewEnumAction"
+               enablesFor="1"
+               id="vpml.informationpackage.actions.NewEnumAction1"
+               label="新建枚举类型"
+               icon="icons/gify.gif"
+               menubarPath="additions">
+         </action>
+         <action
+               class="vpml.informationpackage.actions.NewListAction"
+               enablesFor="1"
+               id="vpml.informationpackage.actions.NewListAction1"
+               label="新建列表"
+               icon="icons/gify.gif"
+               menubarPath="additions">
+         </action>
+         <action
+               class="vpml.informationpackage.actions.NewFormAction"
+               enablesFor="1"
+               id="vpml.informationpackage.actions.NewFormAction1"
+               label="新建表单"
+               icon="icons/gify.gif"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+   </extension>
+
+  <extension
+    point = "org.eclipse.ui.newWizards">
+    <category
+      id = "org.eclipse.emf.ecore.Wizard.category.ID"
+      name="%_UI_Wizard_category">
+    </category>
+    <wizard
+      id = "vpml.presentation.VpmlModelWizardID"
+      name = "%_UI_VpmlModelWizard_label"
+      class = "vpml.presentation.VpmlModelWizard"
+      category = "org.eclipse.emf.ecore.Wizard.category.ID"
+      icon = "icons/full/obj16/VpmlModelFile.gif">
+      <description>%_UI_VpmlModelWizard_description</description>
+      <selection class = "org.eclipse.core.resources.IResource" />
+    </wizard>
+  </extension>
+
+  <extension point = "org.eclipse.ui.editors">
+    <editor
+        id = "vpml.presentation.VpmlEditorID"
+        name = "%_UI_VpmlEditor_label"
+        icon = "icons/full/obj16/VpmlModelFile.gif"
+        extensions = "vpml"
+        class = "vpml.presentation.VpmlEditor" 
+        contributorClass="vpml.presentation.VpmlActionBarContributor" >
+    </editor>
+  </extension>    
+
+  <extension
+    point = "org.eclipse.ui.newWizards">
+    <category
+      id = "org.eclipse.emf.ecore.Wizard.category.ID"
+      name="%_UI_Wizard_category">
+    </category>
+    <wizard
+      id = "vpml.informationpackage.presentation.InformationpackageModelWizardID"
+      name = "%_UI_InformationpackageModelWizard_label"
+      class = "vpml.informationpackage.presentation.InformationpackageModelWizard"
+      category = "org.eclipse.emf.ecore.Wizard.category.ID"
+      icon = "icons/full/obj16/InformationpackageModelFile.gif">
+      <description>%_UI_InformationpackageModelWizard_description</description>
+      <selection class = "org.eclipse.core.resources.IResource" />
+    </wizard>
+  </extension>
+
+  <extension point = "org.eclipse.ui.editors">
+    <editor
+        id = "vpml.informationpackage.presentation.InformationpackageEditorID"
+        name = "%_UI_InformationpackageEditor_label"
+        icon = "icons/full/obj16/InformationpackageModelFile.gif"
+        extensions = "informationpackage,form,list,enum"
+        class = "vpml.informationpackage.presentation.InformationpackageEditor" 
+        contributorClass="vpml.informationpackage.presentation.InformationpackageActionBarContributor" >
+    </editor>
+  </extension>
+  <extension
+        point="org.eclipse.ui.navigator.viewer">
+     <viewerContentBinding
+           viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+        <includes>
+           <contentExtension
+                 pattern="information.editor.navigator.navigatorContent">
+           </contentExtension>
+        </includes>
+     </viewerContentBinding>
+     <viewer
+           viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+     </viewer>
+     <viewerActionBinding
+           viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+        <includes>
+           <actionExtension
+                 pattern="org.eclipse.ui.navigator.resources.*">
+           </actionExtension>
+        </includes>
+     </viewerActionBinding>
+  </extension>
+  <extension
+        point="org.eclipse.ui.views">
+     <category
+           id="information.editor.category"
+           name="Common Navigator">
+     </category>
+     <view
+     	   allowMultiple="false"
+           category="information.editor.category"
+           class="org.eclipse.ui.navigator.CommonNavigator"
+           icon="icons/full/obj16/VpmlModelFile.gif"
+           id="org.eclipse.ui.navigator.viewer"
+           name="模型浏览器">
+     </view>
+  </extension>
+  <extension
+        point="org.eclipse.ui.navigator.navigatorContent">
+     <navigatorContent
+           activeByDefault="true"
+           contentProvider="information.editor.navigator.InfoModelContentProvider"
+           icon="icons/full/obj16/VpmlModelFile.gif"
+           id="information.editor.navigator.navigatorContent"
+           labelProvider="information.editor.navigator.InfoModelLabelProvider"
+           name="Info Model Navigator Content"
+           priority="highest">
+        <triggerPoints>
+           <or>
+           <and>
+              <instanceof
+                    value="org.eclipse.core.resources.IFile">
+              </instanceof>
+              <test
+                    property="org.eclipse.core.resources.extension"
+                    value="form">
+              </test>
+           </and>
+           <and>
+              <instanceof
+                    value="org.eclipse.core.resources.IFile">
+              </instanceof>
+              <test
+                    property="org.eclipse.core.resources.extension"
+                    value="list">
+              </test>
+           </and>
+           <and>
+              <instanceof
+                    value="org.eclipse.core.resources.IFile">
+              </instanceof>
+              <test
+                    property="org.eclipse.core.resources.extension"
+                    value="enum">
+              </test>
+           </and>
+           <and>
+              <instanceof
+                    value="org.eclipse.core.resources.IProject">
+              </instanceof>
+              <test
+                    property="org.eclipse.core.resources.extension"
+                    value="info">
+              </test>
+           </and>
+           </or>
+        </triggerPoints>
+     </navigatorContent>
+  </extension>    
+</plugin>

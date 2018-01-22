@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Search Plug-in
+Bundle-SymbolicName: newpmbe.search; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: newpmbe.search.Activator
+Bundle-Vendor: 秦杰
+Require-Bundle: org.eclipse.ui.ide,
+ org.eclipse.ui,
+ org.eclipse.core.runtime,
+ newpmbe.activity,
+ newPmbe.product,
+ org.eclipse.gmf.runtime.emf.core,
+ org.eclipse.gmf.runtime.emf.commands.core,
+ org.eclipse.gmf.runtime.emf.ui.properties,
+ org.eclipse.gmf.runtime.diagram.ui.resources.editor,
+ org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide,
+ org.eclipse.jface.databinding,
+ org.eclipse.gmf.runtime.diagram.ui,
+ newpmbe.process.diagram,
+ newpmbe.product.diagram
+Eclipse-LazyStart: true
+Export-Package: newpmbe.search,
+ newpmbe.search.actions

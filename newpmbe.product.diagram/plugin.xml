@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+   
+
+   <extension point="org.eclipse.team.core.fileTypes">
+      <?gmfgen generated="true"?>
+      <fileTypes
+         type="text"
+         extension="product_diagram">
+      </fileTypes>
+   </extension>
+
+   
+
+   <extension point="org.eclipse.ui.editors">
+      <?gmfgen generated="true"?>
+     <editor
+        id="newpmbe.product.diagram.part.NewPMBEDiagramEditorID"
+        name="%editorName"
+        icon="icons/obj16/ProcesspackageDiagramFile.gif"
+        extensions="product_diagram"
+        default="true"
+        class="newpmbe.product.diagram.part.NewPMBEDiagramEditor"
+        matchingStrategy="newpmbe.product.diagram.part.NewPMBEMatchingStrategy"
+        contributorClass="newpmbe.product.diagram.part.NewPMBEDiagramActionBarContributor">
+     </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/ProcesspackageDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="newpmbe.product.diagram.part.NewPMBECreationWizard"
+  	     id="newpmbe.product.diagram.part.NewPMBECreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="newpmbe.product.diagram.ui.objectContribution.IFile1"
+            nameFilter="*.product"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="newpmbe.product.diagram.part.NewPMBEInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="newpmbe.product.diagram.part.NewPMBEInitDiagramFileActionID">
+         </action>
+      </objectContribution>  
+  </extension>
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+
+   
+
+   
+   
+   
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor contributorId="newpmbe.product.diagram"
+            labelProvider="newpmbe.product.diagram.sheet.NewPMBESheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs contributorId="newpmbe.product.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections contributorId="newpmbe.product.diagram">
+
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <!--don't need this
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>      
+         -->        
+
+          <propertySection id="property.section.RulerGridPropertySection" 
+             filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+             class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+             tab="property.tab.DiagramPropertySection">
+          </propertySection>              
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="newpmbe.product.diagram.sheet.NewPMBEPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="newpmbe.product.diagram.navigator.NewPMBEAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension><extension point="org.eclipse.core.runtime.preferences">
+      <?gmfgen generated="true"?>
+      <initializer class="newpmbe.product.diagram.part.NewPMBEDiagramPreferenceInitializer"/>
+   </extension>
+<extension point="org.eclipse.emf.ecore.extension_parser">
+      <?gmfgen generated="true"?>
+      <parser
+         type="product_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+<extension point="org.eclipse.gmf.runtime.common.ui.services.action.contributionItemProviders">
+      <?gmfgen generated="true"?>
+      <contributionItemProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContributionItemProvider"
+            checkPluginLoaded="false">
+         <Priority name="Low"/>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.product.diagram.edit.parts.EMPArtifactEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.product.diagram.edit.parts.EMPArtifactNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+            <popupPredefinedItem id="deleteFromModelAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.product.diagram.edit.parts.EMPDocumentEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.product.diagram.edit.parts.EMPDocumentNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+            <popupPredefinedItem id="deleteFromModelAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.product.diagram.edit.parts.EMPMessageEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.product.diagram.edit.parts.EMPMessageNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+            <popupPredefinedItem id="deleteFromModelAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.product.diagram.edit.parts.EMPOtherEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.product.diagram.edit.parts.EMPOtherNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+            <popupPredefinedItem id="deleteFromModelAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.product.diagram.edit.parts.EMPProductPackageEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.product.diagram.edit.parts.EMPProductPackageNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+            <popupPredefinedItem id="deleteFromModelAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.product.diagram.edit.parts.EMPFormEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="newpmbe.product.diagram.edit.parts.EMPFormNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+            <popupPredefinedItem id="deleteFromModelAction" remove="true"/>
+         </popupContribution>
+      </contributionItemProvider>
+   </extension>
+<extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="newproductPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="newpmbe.product.diagram.part.NewPMBEDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="newproductPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="newpmbe.product.diagram.part.NewPMBEDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="newproductRender">
+         <Priority name="Lowest"/>
+         <ViewId id="newpmbe.product.diagram.part.NewPMBEDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+<extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders">
+      <?gmfgen generated="true"?>
+      <viewProvider class="newpmbe.product.diagram.providers.NewPMBEViewProvider">
+         <Priority name="Lowest"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="newproduct"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints=""/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints=""/>
+      </viewProvider>
+   </extension>
+<extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="newpmbe.product.diagram.providers.NewPMBEEditPartProvider">
+         <Priority name="Lowest"/>
+      </editpartProvider>
+   </extension>
+<extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="newpmbe.product.diagram.providers.NewPMBEModelingAssistantProvider">
+         <Priority name="Lowest"/>
+      </modelingAssistantProvider>
+   </extension>
+<extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders">
+      <?gmfgen generated="true"?>
+      <IconProvider class="newpmbe.product.diagram.providers.NewPMBEIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+<extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="newpmbe.product.diagram.providers.NewPMBEParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+<extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes">
+      <?gmfgen generated="true"?>
+
+      <metamodel nsURI="http:///vpml/processpackage.ecore">
+         <metamodelType
+               id="newpmbe.product.diagram.EMPDiagram_1000"
+               name="Undefined"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EMPDiagram"
+               edithelper="newpmbe.product.diagram.edit.helpers.EMPDiagramEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http:///vpml/processpackage.ecore">
+         <metamodelType
+               id="newpmbe.product.diagram.EMPArtifact_2001"
+               name="EMPArtifact"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EMPArtifact"
+               edithelper="newpmbe.product.diagram.edit.helpers.EMPArtifactEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http:///vpml/processpackage.ecore">
+         <metamodelType
+               id="newpmbe.product.diagram.EMPDocument_2002"
+               name="EMPDocument"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EMPDocument"
+               edithelper="newpmbe.product.diagram.edit.helpers.EMPDocumentEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http:///vpml/processpackage.ecore">
+         <metamodelType
+               id="newpmbe.product.diagram.EMPMessage_2003"
+               name="EMPMessage"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EMPMessage"
+               edithelper="newpmbe.product.diagram.edit.helpers.EMPMessageEditHelper">
+            <param name="semanticHint" value="2003"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http:///vpml/processpackage.ecore">
+         <metamodelType
+               id="newpmbe.product.diagram.EMPOther_2004"
+               name="EMPOther"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EMPOther"
+               edithelper="newpmbe.product.diagram.edit.helpers.EMPOtherEditHelper">
+            <param name="semanticHint" value="2004"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http:///vpml/processpackage.ecore">
+         <metamodelType
+               id="newpmbe.product.diagram.EMPProductPackage_2005"
+               name="EMPProductPackage"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EMPProductPackage"
+               edithelper="newpmbe.product.diagram.edit.helpers.EMPProductPackageEditHelper">
+            <param name="semanticHint" value="2005"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http:///vpml/processpackage.ecore">
+         <metamodelType
+               id="newpmbe.product.diagram.EMPForm_2006"
+               name="EMPForm"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EMPForm"
+               edithelper="newpmbe.product.diagram.edit.helpers.EMPFormEditHelper">
+            <param name="semanticHint" value="2006"/>
+         </metamodelType>
+      </metamodel>
+   </extension>
+<extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="newproductClientContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="newpmbe.product.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="newproductClientContext">
+         <elementType ref="newpmbe.product.diagram.EMPDiagram_1000"/>
+         <elementType ref="newpmbe.product.diagram.EMPArtifact_2001"/>
+         <elementType ref="newpmbe.product.diagram.EMPDocument_2002"/>
+         <elementType ref="newpmbe.product.diagram.EMPMessage_2003"/>
+         <elementType ref="newpmbe.product.diagram.EMPOther_2004"/>
+         <elementType ref="newpmbe.product.diagram.EMPProductPackage_2005"/>
+         <elementType ref="newpmbe.product.diagram.EMPForm_2006"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+<extension point="org.eclipse.ui.navigator.viewer">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="newpmbe.product.diagram.resourceContent"/>
+            <contentExtension pattern="newpmbe.product.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="newpmbe.product.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+<extension point="org.eclipse.ui.navigator.navigatorContent">
+      <?gmfgen generated="true"?>
+      <navigatorContent 
+            id="newpmbe.product.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="newpmbe.product.diagram.navigator.NewPMBENavigatorContentProvider" 
+            labelProvider="newpmbe.product.diagram.navigator.NewPMBENavigatorLabelProvider"
+            icon="icons/obj16/ProcesspackageDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="product_diagram"/>
+               </and>
+               <instanceof value="newpmbe.product.diagram.navigator.NewPMBEAbstractNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="newpmbe.product.diagram.navigator.NewPMBEAbstractNavigatorItem"/>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="newpmbe.product.diagram.navigatorSorter" 
+               class="newpmbe.product.diagram.navigator.NewPMBENavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="product_diagram"/>
+                  </and>
+                  <instanceof value="newpmbe.product.diagram.navigator.NewPMBEAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <actionProvider
+            id="newpmbe.product.diagram.navigatorActionProvider"
+            class="newpmbe.product.diagram.navigator.NewPMBENavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="newpmbe.product.diagram.navigator.NewPMBEAbstractNavigatorItem"/>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+<extension point="org.eclipse.ui.navigator.linkHelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="newpmbe.product.diagram.navigatorLinkHelper"
+            class="newpmbe.product.diagram.navigator.NewPMBENavigatorLinkHelper">
+         <editorInputEnablement>
+            <instanceof value="org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide.document.FileEditorInputProxy"/>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="newpmbe.product.diagram.navigator.NewPMBEAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+
+</plugin>

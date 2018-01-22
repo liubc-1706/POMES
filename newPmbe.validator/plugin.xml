@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="完整性检查视图"
+            id="newPmbe.validator">
+      </category>
+      <view
+            name="完整性检查报告"
+            icon="icons/sample.gif"
+            category="newPmbe.validator"
+            class="newpmbe.process.validator.ProblemsView"
+            id="newpmbe.validator.views.ProblemsView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.ui.resourcePerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.TaskList"
+               relationship="right"
+               id="newpmbe.validator.views.ProblemsView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   
+   <extension point="org.eclipse.ui.popupMenus">  
+   		<objectContribution
+            id="newPmbe.validator.objectContribution.IProject"
+            objectClass="org.eclipse.core.resources.IProject"
+            nameFilter="*.process">
+         <action
+               class="newpmbe.validator.actions.ProcessValidateAction"
+               enablesFor="1"
+               id="newpmbe.validator.actions.ProcessValidateAction1"
+               label="完整性检查"
+               icon="icons/gify.gif"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

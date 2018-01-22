@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- 由 Microsoft Visio 2003, SVG Export, v1.0 生成 时钟.svg 页-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="6.85706in"
+		height="6.15903in" viewBox="0 0 493.708 443.45" xml:space="preserve" color-interpolation-filters="sRGB" class="st5">
+	<v:documentProperties v:langID="2052" v:metric="true" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#000000;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st2 {fill:#ffffff;stroke:#008000;stroke-linecap:round;stroke-linejoin:round;stroke-width:4.08}
+		.st3 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:3.12}
+		.st4 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:4.08}
+		.st5 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<g id="group8-1" transform="translate(0.24,-14.1732)" v:mID="8" v:groupContext="group">
+			<title>工作表.8</title>
+			<g id="shape2-2" v:mID="2" v:groupContext="shape" transform="translate(28.3465,-286.299)">
+				<title>Ellipse.2</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(11):26"/>
+				</v:userDefs>
+				<path d="M0 386.76 A85.0394 56.6929 0 0 1 170.08 386.76 A85.0394 56.6929 0 0 1 0 386.76 Z" class="st1"/>
+			</g>
+			<g id="shape6-4" v:mID="6" v:groupContext="shape" transform="translate(283.465,-286.299)">
+				<title>Ellipse</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(11):26"/>
+				</v:userDefs>
+				<path d="M0 386.76 A85.0394 56.6929 0 0 1 170.08 386.76 A85.0394 56.6929 0 0 1 0 386.76 Z" class="st1"/>
+			</g>
+			<g id="shape1-6" v:mID="1" v:groupContext="shape" transform="translate(243.78,-240.945)">
+				<title>Center drag circle</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(11):26"/>
+				</v:userDefs>
+				<path d="M-184.25 443.45 A184.252 184.252 0 0 1 184.25 443.45 A184.252 184.252 0 1 1 -184.25 443.45 Z" class="st2"/>
+			</g>
+			<g id="shape4-8" v:mID="4" v:groupContext="shape" transform="translate(340.157,-5.68434E-014)">
+				<title>Right triangle</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(11):26"/>
+				</v:userDefs>
+				<path d="M0 443.45 L153.07 443.45 L0 358.41 L0 443.45 Z" class="st1"/>
+			</g>
+			<g id="shape5-10" v:mID="5" v:groupContext="shape" transform="translate(141.732,1.13687E-013) scale(-1,1)">
+				<title>Right triangle.5</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(11):26"/>
+				</v:userDefs>
+				<path d="M0 443.45 L141.73 443.45 L0 358.41 L0 443.45 Z" class="st1"/>
+			</g>
+			<g id="shape3-12" v:mID="3" v:groupContext="shape" transform="translate(687.23,100.458) rotate(90)">
+				<title>工作表.3</title>
+				<path d="M0 443.45 L141.73 443.45" class="st3"/>
+			</g>
+			<g id="shape7-15" v:mID="7" v:groupContext="shape" transform="translate(226.772,-240.945)">
+				<title>工作表.7</title>
+				<path d="M0 443.45 L158.74 443.45" class="st4"/>
+			</g>
+		</g>
+	</g>
+</svg>

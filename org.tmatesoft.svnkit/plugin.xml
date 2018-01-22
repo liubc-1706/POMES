@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="权限控制"
+            visible="true"
+            id="newpmbe.svn.actionSet">
+            <action
+               label="导入模块到存储库..."
+               tooltip="%importModel_tooltip"
+               class="newpmbe.svn.actions.ImportModuleAction"
+               menubarPath="newpmbe.svn.menu/additions"
+               id="newpmbe.svn.actions.importmodelAction">
+         </action>
+         <action
+               label="从存储库导出模块..."
+               tooltip="%exportModel_tooltip"
+               class="newpmbe.svn.actions.ExportModuleAction"
+               menubarPath="newpmbe.svn.menu/additions"
+               id="newpmbe.svn.actions.exportmodel">
+         </action>
+            <action
+               label="SVN配置..."
+               tooltip="%configrateModel_tooltip"
+               class="newpmbe.svn.actions.ConfigrateAction"
+               menubarPath="newpmbe.svn.menu/additions"
+               id="newpmbe.svn.actions.config">
+         </action>
+         <action
+               label="SVN登录..."
+               tooltip="%loginModel_tooltip"
+               class="newpmbe.svn.actions.LoginAction"
+               menubarPath="newpmbe.svn.menu/additions"
+               id="newpmbe.svn.actions.login">
+         </action>
+         <menu
+               id="newpmbe.svn.menu"
+               label="用户权限"
+               >
+            <groupMarker
+                  name="rightNavigateGroup">
+            </groupMarker>
+         </menu>
+      </actionSet>
+	</extension>
+
+</plugin>

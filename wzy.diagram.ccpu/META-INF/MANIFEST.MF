@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ccpu Plug-in
+Bundle-SymbolicName: wzy.diagram.ccpu; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: wzy.diagram.ccpu.Activator
+Require-Bundle: org.eclipse.gmf.runtime.diagram.ui,
+ org.eclipse.gmf.runtime.common.ui.services.properties,
+ org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide,
+ org.eclipse.ui.ide,
+ newpmbe.organization.diagram,
+ newpmbe.process.diagram,
+ newpmbe.product.diagram,
+ newpmbe.resource.diagram
+Eclipse-LazyStart: true
+Export-Package: wzy.diagram.ccpu.popup.actions

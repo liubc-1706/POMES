@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgraph:Canvas xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmfgraph="http://www.eclipse.org/gmf/2005/GraphicalDefinition" name="vpml">
+  <figures
+      name="Default">
+    <figures
+        xsi:type="gmfgraph:Rectangle"
+        referencingElements="EMPDocument EMPArtifact EMPOther EMPMessage EMPProductPackage EMPForm"
+        name="BasicRectangle"
+        outline="false"
+        fill="false"/>
+    <figures
+        xsi:type="gmfgraph:Label"
+        referencingElements="EMObjectName"
+        name="NodeName"
+        text="&lt;..>"/>
+  </figures>
+  <nodes
+      name="EMPArtifact"
+      figure="BasicRectangle"/>
+  <nodes
+      name="EMPDocument"
+      figure="BasicRectangle"/>
+  <nodes
+      name="EMPMessage"
+      figure="BasicRectangle"/>
+  <nodes
+      name="EMPOther"
+      figure="BasicRectangle"/>
+  <nodes
+      name="EMPProductPackage"
+      figure="BasicRectangle"/>
+  <nodes
+      name="EMPForm"
+      figure="BasicRectangle"/>
+  <labels
+      name="EMObjectName"
+      figure="NodeName"/>
+</gmfgraph:Canvas>

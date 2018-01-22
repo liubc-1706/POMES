@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.1"?>
+
+<product name="POMES-Editor" id="newPmbe.custom.product" application="newPmbe.custom.application" useFeatures="false">
+
+   <aboutInfo>
+      <image path="/newPmbe.custom/icons/4fun.gif"/>
+      <text>
+         newPmbe is a product for enterprise.
+ It provides a set of sollutions for process, organization and 
+resource, and supports for modelling, simulation and emulation.
+It also automatic generates the documents during the modeling, 
+which can bring more efficiency for planning and executing
+tasks.
+      </text>
+   </aboutInfo>
+
+   <configIni use="default"/>
+
+   <launcherArgs>
+      <vmArgs>-Xms64m -Xmx512m</vmArgs>
+   </launcherArgs>
+
+   <windowImages i16="/newPmbe.custom/icons/alt_window_16.gif" i32="/newPmbe.custom/icons/alt_window_32.gif"/>
+
+   <splash
+      location="newPmbe.custom"
+      startupProgressRect="300,400,200,20"
+      startupMessageRect="200,400,200,20"
+      startupForegroundColor="400080" />
+   <launcher name="POMES-Editor 3.0">
+      <solaris/>
+      <win useIco="true">
+         <ico path="/newPmbe.custom/icons/POMESLOGO.ico"/>
+         <bmp/>
+      </win>
+   </launcher>
+
+   <intro introId="newPmbe.custom.intro"/>
+
+   <plugins>
+      <plugin id="com.ibm.icu"/>
+      <plugin id="newPmbe.PropertyDlg"/>
+      <plugin id="newPmbe.custom"/>
+      <plugin id="newPmbe.print"/>
+      <plugin id="newPmbe.product"/>
+      <plugin id="newPmbe.validator"/>
+      <plugin id="newPmbe.web"/>
+      <plugin id="newpmbe"/>
+      <plugin id="newpmbe.activity"/>
+      <plugin id="newpmbe.edit"/>
+      <plugin id="newpmbe.icons"/>
+      <plugin id="newpmbe.organization.diagram"/>
+      <plugin id="newpmbe.process.diagram"/>
+      <plugin id="newpmbe.product.diagram"/>
+      <plugin id="newpmbe.resource.diagram"/>
+      <plugin id="newpmbe.search"/>
+      <plugin id="newpmbe.svn"/>
+      <plugin id="org.apache.batik"/>
+      <plugin id="org.apache.lucene"/>
+      <plugin id="org.apache.xerces"/>
+      <plugin id="org.eclipse.ant.core"/>
+      <plugin id="org.eclipse.core.commands"/>
+      <plugin id="org.eclipse.core.contenttype"/>
+      <plugin id="org.eclipse.core.expressions"/>
+      <plugin id="org.eclipse.core.filebuffers"/>
+      <plugin id="org.eclipse.core.filesystem"/>
+      <plugin id="org.eclipse.core.filesystem.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.jobs"/>
+      <plugin id="org.eclipse.core.resources"/>
+      <plugin id="org.eclipse.core.resources.compatibility" fragment="true"/>
+      <plugin id="org.eclipse.core.resources.win32" fragment="true"/>
+      <plugin id="org.eclipse.core.runtime"/>
+      <plugin id="org.eclipse.core.runtime.compatibility"/>
+      <plugin id="org.eclipse.core.runtime.compatibility.auth"/>
+      <plugin id="org.eclipse.core.runtime.compatibility.registry" fragment="true"/>
+      <plugin id="org.eclipse.core.variables"/>
+      <plugin id="org.eclipse.draw2d"/>
+      <plugin id="org.eclipse.emf.common"/>
+      <plugin id="org.eclipse.emf.common.ui"/>
+      <plugin id="org.eclipse.emf.ecore"/>
+      <plugin id="org.eclipse.emf.ecore.change"/>
+      <plugin id="org.eclipse.emf.ecore.edit"/>
+      <plugin id="org.eclipse.emf.ecore.xmi"/>
+      <plugin id="org.eclipse.emf.edit"/>
+      <plugin id="org.eclipse.emf.edit.ui"/>
+      <plugin id="org.eclipse.emf.transaction"/>
+      <plugin id="org.eclipse.emf.validation"/>
+      <plugin id="org.eclipse.emf.workspace"/>
+      <plugin id="org.eclipse.equinox.common"/>
+      <plugin id="org.eclipse.equinox.preferences"/>
+      <plugin id="org.eclipse.equinox.registry"/>
+      <plugin id="org.eclipse.gef"/>
+      <plugin id="org.eclipse.gmf.runtime.common.core"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.action"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.action.ide"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.services"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.services.action"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.services.properties"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.core"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.actions"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.properties"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.providers"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.providers.ide"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.render"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.resources.editor"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide"/>
+      <plugin id="org.eclipse.gmf.runtime.draw2d.ui"/>
+      <plugin id="org.eclipse.gmf.runtime.draw2d.ui.render"/>
+      <plugin id="org.eclipse.gmf.runtime.draw2d.ui.render.awt"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.clipboard.core"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.commands.core"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.core"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.type.core"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.type.ui"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.ui"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.ui.properties"/>
+      <plugin id="org.eclipse.gmf.runtime.gef.ui"/>
+      <plugin id="org.eclipse.gmf.runtime.notation"/>
+      <plugin id="org.eclipse.gmf.runtime.notation.providers"/>
+      <plugin id="org.eclipse.help"/>
+      <plugin id="org.eclipse.help.appserver"/>
+      <plugin id="org.eclipse.help.base"/>
+      <plugin id="org.eclipse.jface"/>
+      <plugin id="org.eclipse.jface.databinding"/>
+      <plugin id="org.eclipse.jface.text"/>
+      <plugin id="org.eclipse.osgi"/>
+      <plugin id="org.eclipse.swt"/>
+      <plugin id="org.eclipse.swt.win32.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.team.core"/>
+      <plugin id="org.eclipse.text"/>
+      <plugin id="org.eclipse.ui"/>
+      <plugin id="org.eclipse.ui.console"/>
+      <plugin id="org.eclipse.ui.editors"/>
+      <plugin id="org.eclipse.ui.forms"/>
+      <plugin id="org.eclipse.ui.ide"/>
+      <plugin id="org.eclipse.ui.intro"/>
+      <plugin id="org.eclipse.ui.navigator"/>
+      <plugin id="org.eclipse.ui.views"/>
+      <plugin id="org.eclipse.ui.views.properties.tabbed"/>
+      <plugin id="org.eclipse.ui.win32" fragment="true"/>
+      <plugin id="org.eclipse.ui.workbench"/>
+      <plugin id="org.eclipse.ui.workbench.texteditor"/>
+      <plugin id="org.eclipse.update.configurator"/>
+      <plugin id="org.eclipse.update.core"/>
+      <plugin id="org.eclipse.update.core.win32" fragment="true"/>
+      <plugin id="org.eclipse.update.ui"/>
+      <plugin id="wzy.diagram.ccpu"/>
+   </plugins>
+
+</product>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- 由 Microsoft Visio 2003, SVG Export, v1.0 生成 文件夹.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="8.26772in"
+		height="11.6929in" viewBox="0 0 595.276 841.89" xml:space="preserve" color-interpolation-filters="sRGB" class="st2">
+	<v:documentProperties v:langID="2052" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#00ccff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st2 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="SchemeName" v:val="VT4(Default)"/>
+		</v:userDefs>
+		<title>Page-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="连接线" v:index="0"/>
+		<g id="group1-1" transform="translate(453.543,1179.35) rotate(180)" v:mID="1" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="ScaleFactor" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(11):26"/>
+			</v:userDefs>
+			<title>3-D box</title>
+			<g id="shape2-2" v:mID="2" v:groupContext="shape" transform="translate(0,119.195)">
+				<title>工作表.2</title>
+				<path d="M0 722.69 L453.54 722.69 L311.81 841.89 L-141.73 841.89 L0 722.69 Z" class="st1"/>
+			</g>
+			<g id="shape3-4" v:mID="3" v:groupContext="shape" transform="translate(-141.732,0)">
+				<title>工作表.3</title>
+				<path d="M0 961.08 L141.73 841.89 L141.73 513.35 L0 632.55 L0 961.08 Z" class="st1"/>
+			</g>
+			<g id="shape4-6" v:mID="4" v:groupContext="shape">
+				<title>工作表.4</title>
+				<rect x="0" y="513.351" width="453.543" height="328.539" class="st1"/>
+			</g>
+		</g>
+	</g>
+</svg>
